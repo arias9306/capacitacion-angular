@@ -15,6 +15,7 @@
 ## [Día 2](https://github.com/arias9306/capacitacion-angular/blob/master/dia2.md#d%C3%ADa-2)
 
 * [Que es Angular](https://github.com/arias9306/capacitacion-angular/blob/master/dia2.md#que-es-angular)
+* [Setup](https://github.com/arias9306/capacitacion-angular/blob/master/dia2.md#setup)
 * [Conceptos Importantes](https://github.com/arias9306/capacitacion-angular/blob/master/dia2.md#conceptos-importantes)
   * [Componentes](https://github.com/arias9306/capacitacion-angular/blob/master/dia2.md#componentes)
   * [Modulos](https://github.com/arias9306/capacitacion-angular/blob/master/dia2.md#modulos)
