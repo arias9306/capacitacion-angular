@@ -1,4 +1,17 @@
 # Capacitación Angular
+## Setup
+### Prerrequisitos
+* [NodeJs](https://nodejs.org/)
+* [Angular CLI](https://cli.angular.io/)
+  
+  Para instalar le Angular Cli ejecutar el siguiente comando en la consola.
+  ```
+   npm install -g @angular/cli
+  ```
+* [Visual Studio Code](https://code.visualstudio.com/) 
+  > **Recomendación:** Instalar la extensión _Angular Essentials_ ya que contiene otras extensiones muy utiles para el desarrollo de aplicaciones Angular en Visual Studio Code.
+
+  > **NOTA:** La extensión de _Angular Essentials_ instala una extensión que se ejecuta en el puerto 8888
 
 ## Día 1
 
