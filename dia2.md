@@ -18,6 +18,12 @@ Los componentes son lo elementos que se muestran en pantalla, pueden ser una pag
 ### Servicios
 
 ## Crear Proyecto con el CLI
+
+* Nos Ubicamos en la carpeta donde queremos crear nuestro proyecto, abrimos la consola y ejecutamos el siguiente comando
+  ```
+  ng new <nombre-del-proyecto>
+  ```
+
 ## Interpolación
 
 # Proyecto
