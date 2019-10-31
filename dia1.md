@@ -145,13 +145,14 @@ for (let hero of heroes) {
 ```
 
 ## Tipos de datos
-### boolean: true/false
+### boolean:
 
 ``` typescript
 let isAwesome: boolean = true;
 ```
 
-### string: cadenas de texto, rodeadas por ', " o `
+### string:
+cadenas de texto, rodeadas por ', " o `
 
 ``` typescript
 let name: string = 'Doe';
@@ -165,7 +166,8 @@ let age: number = 22;
 let information: `Jon Doe, Age: ${age}`
 ```
 
-### number: permite almacenar enteros o números flotantes, en notación decimal, binaria, ocatl o hexadecimal
+### number:
+permite almacenar enteros o números flotantes, en notación decimal, binaria, ocatl o hexadecimal
 ``` typescript
 let decimalNumber: number = 42;
 let binaryNumber: number = 0b101010; // => 42
@@ -179,7 +181,8 @@ let heroes: string[] = [ 'Iron Man', 'Captain America', 'Thor', 'Black Widow' ];
 let fibonacci: number[] = [ 1, 2, 3, 5, 8 ];
 ```
 
-### tuple: Arreglo que contiene un número fijo de elementos de un tipo especificado
+### tuple:
+arreglo que contiene un número fijo de elementos de un tipo especificado
 ``` typescript
 let myFavoriteTuple: [string, number, boolean];
 
@@ -209,7 +212,8 @@ enum ThemeColors {
 }
 ```
 
-### any: Tipo de variable usado cuando no se conoce el tipo especifico
+### any:
+Tipo de variable usado cuando no se conoce el tipo especifico
 ``` typescript
 let foo: any = 4;
 
@@ -225,7 +229,8 @@ logger(msg: string): void {
 }
 ```
 
-### null o undefined: son subtipos de los otros tipos, por lo que a los strings se les puede asignar un valor de null o undefined.
+### null o undefined:
+son subtipos de los otros tipos, por lo que a lass variables de tipo string, number, o boolean se les puede asignar un valor de null o undefined.
 ``` typescript
 let hello: undefined = undefined; // realmente no es muy util usarlo de esta forma
 let name: string = undefined;
