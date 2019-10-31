@@ -2,8 +2,13 @@
 
 ## Día 1
 
+* Introducción
 * Typescript
   * Que es Typescript
+  * Tipos de datos
+  * Let / Const
+  * Union Type
+  * Optional Type
 
 
 
