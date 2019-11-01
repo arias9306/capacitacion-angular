@@ -2,6 +2,33 @@
 
 ## Introducción
 
+* Javascript Moderno
+
+  * [Funciones Flecha](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#funciones-flecha)
+  * [Clases](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#clases)
+  * [Let & Const](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#let--const)
+  * [Destructuración](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#destructuraci%C3%B3n)
+  * [Parametro con valor por defecto](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#parametro-con-valor-por-defecto)
+  * [Parametros Rest](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#parametros-rest)
+  * [Operador de propagación (Spread)](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#operador-de-propagaci%C3%B3n-spread)
+  * [For..of](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#for-of)
+  * Más información [aquí](https://github.com/lukehoban/es6features#readme)
+
+* [Typescript](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#typescript)
+
+  * [Tipos de Datos](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#tipos-de-datos)
+    * [Boolean](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#boolean)
+    * [String](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#string)
+    * [Number](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#number)
+    * [Array](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#array)
+    * [Tuple](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#tuple)
+    * [Enum](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#enum)
+    * [Any](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#any)
+    * [Void](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#void)
+    * [Null o Undefined](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#null-o-undefined)
+    * Mas información [aquí](https://www.typescriptlang.org/docs/handbook/basic-types.html)
+  * [Clases](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#ts-clases)
+  * [Interfaces](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#interfaces)
 
 
 ## Javascript Moderno
@@ -9,16 +36,6 @@
 Ya que Angular es un framework javascript es importante conocer las nuevas funcionalidades y sintaxis del mismo.
 
 Entre las nuevas características están:
-
-* [Funciones Flecha](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#funciones-flecha)
-* [Clases](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#clases)
-* [Let & Const](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#let--const)
-* [Destructuración](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#destructuraci%C3%B3n)
-* [Parametro con valor por defecto](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#parametro-con-valor-por-defecto)
-* [Parametros Rest](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#parametros-rest)
-* [Operador de propagación (Spread)](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#operador-de-propagaci%C3%B3n-spread)
-* [For..of](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#for-of)
-* Más información [aquí](https://github.com/lukehoban/es6features#readme)
 
 ### Funciones flecha
 Permite declarar funciones de forma corta y resolver el problema de scoping del this que se presentaba previamente en Javascript.
@@ -270,3 +287,7 @@ let hello: undefined = undefined; // realmente no es muy util usarlo de esta for
 let name: string = undefined;
 let firstName: string = null;
 ```
+
+### TS Clases 
+
+### Interfaces
