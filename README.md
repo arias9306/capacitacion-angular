@@ -15,7 +15,7 @@
 
   > **NOTA:** La extensión de _Angular Essentials_ instala una extensión que se ejecuta en el puerto 8888
 
-## [Día 1](https://github.com/arias9306/capacitacion-angular/edit/master/dia1.md)
+## [Día 1](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md)
 
 * [Javascript Moderno](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#javascript-moderno)
 
