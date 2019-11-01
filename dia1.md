@@ -28,6 +28,9 @@
     * Mas información [aquí](https://www.typescriptlang.org/docs/handbook/basic-types.html)
   * [Clases](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#clases)
   * [Interfaces](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#interfaces)
+  * [Union Type](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#union-type)
+  * [Intersection Type](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#intersection-type)
+  * [Optional](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#optional)
 
 
 ## Javascript Moderno
