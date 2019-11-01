@@ -5,7 +5,6 @@
 * Javascript Moderno
 
   * [Funciones Flecha](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#funciones-flecha)
-  * [Clases](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#clases)
   * [Let & Const](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#let--const)
   * [Destructuración](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#destructuraci%C3%B3n)
   * [Parametro con valor por defecto](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#parametro-con-valor-por-defecto)
@@ -27,7 +26,7 @@
     * [Void](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#void)
     * [Null o Undefined](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#null-o-undefined)
     * Mas información [aquí](https://www.typescriptlang.org/docs/handbook/basic-types.html)
-  * [Clases](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#ts-clases)
+  * [Clases](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#clases)
   * [Interfaces](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#interfaces)
 
 
