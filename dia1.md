@@ -339,3 +339,24 @@ person.companyId = 'SP302334'; // ✅
 person.id = '10033402'; // ✅
 person.name = 'Henry'; // ❌
 ```
+
+### Optional
+``` typescript
+class Hero = {
+    id: string;
+    name: string;
+    team?: string;
+    powers: string[];
+    
+    constructor(name: string, team?: string,  powers?: string[]) {
+      this.id = name + team;
+      this.name = name;
+      this.team = team;
+      this.powers = powers;
+   }
+};
+
+const spiderMan = new Hero('Spider Man', 'Avengers', [ 'spider sense', 'super strenght' ]);
+const ironMan = new Hero('Iron Man', 'Avengers');
+const scarletWitch = new Hero('Scarlet Witch');
+```
