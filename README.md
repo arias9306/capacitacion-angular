@@ -15,17 +15,35 @@
 
   > **NOTA:** La extensión de _Angular Essentials_ instala una extensión que se ejecuta en el puerto 8888
 
-## [Día 1](https://github.com/arias9306/capacitacion-angular/blob/master/dia1)
+## [Día 1](https://github.com/arias9306/capacitacion-angular/edit/master/dia1.md)
 
-* Introducción
-* Typescript
-  * Que es Typescript
-  * Tipos de datos
-  * Let / Const
-  * Union Type
-  * Optional Type
+* [Javascript Moderno](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#javascript-moderno)
 
+  * [Funciones Flecha](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#funciones-flecha)
+  * [Clases](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#clases)
+  * [Let & Const](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#let--const)
+  * [Destructuración](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#destructuraci%C3%B3n)
+  * [Parametro con valor por defecto](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#parametro-con-valor-por-defecto)
+  * [Parametros Rest](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#parametros-rest)
+  * [Operador de propagación (Spread)](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#operador-de-propagaci%C3%B3n-spread)
+  * [For..of](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#for-of)
+  * Más información [aquí](https://github.com/lukehoban/es6features#readme)
 
+* [Typescript](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#typescript)
+
+  * [Tipos de Datos](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#tipos-de-datos)
+    * [Boolean](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#boolean)
+    * [String](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#string)
+    * [Number](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#number)
+    * [Array](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#array)
+    * [Tuple](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#tuple)
+    * [Enum](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#enum)
+    * [Any](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#any)
+    * [Void](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#void)
+    * [Null o Undefined](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#null-o-undefined)
+    * Mas información [aquí](https://www.typescriptlang.org/docs/handbook/basic-types.html)
+  * [Clases](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#ts-clases)
+  * [Interfaces](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#interfaces)
 
 ## [Día 2](https://github.com/arias9306/capacitacion-angular/blob/master/dia2.md#d%C3%ADa-2)
 
