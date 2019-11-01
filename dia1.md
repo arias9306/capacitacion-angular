@@ -17,7 +17,7 @@ Entre las nuevas características están:
 * [Parametro con valor por defecto](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#parametro-con-valor-por-defecto)
 * [Parametros Rest](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#parametros-rest)
 * [Operador de propagación (Spread)](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#operador-de-propagaci%C3%B3n-spread)
-* [For..Of](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#for-of)
+* [For..of](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#for-of)
 * Más información [aquí](https://github.com/lukehoban/es6features#readme)
 
 ### Funciones flecha
@@ -136,6 +136,7 @@ Tiene muchos usos, por ejemplo para copiar un arreglo:
 ``` typescript
 const fruits = ['apple', 'pear', 'peach'];
 const food = [...fruits, 'eggs', 'milk' ];
+//food: ["apple", "pear", "peach", "eggs", "milk"]
 ```
 
 O incluso objetos:
@@ -149,7 +150,9 @@ const obj2 = {
     ...obj1,
     y: 35,
     z: 10
-};
+}; 
+
+// obj2: {foo: "bar", x: 42, y: 35, z: 10}
 ```
 
 ### For of
@@ -158,6 +161,10 @@ const heroes = [ 'Iron Man', 'Captain America', 'Thor', 'Black Widow' ];
 for (let hero of heroes) {
     console.log(hero);
 }
+// Output:  Iron Man
+//          Captain America
+//          Thor
+//          Black Widow
 ```
 ## Typescript
 
