@@ -63,29 +63,6 @@ function Persona(){
 }
 ```
 
-### Clases
-Las clases soportan herencia, super calls, instanciar objetos, métodos estáticos y constructores
-``` javascript
-class Apple extends Fruit {
-
-    isBitten: boolean;
-    
-    constructor(color) {
-        super(color);
-        this.taste = 'sweet';
-        this.hasSeeds = true;
-        this.isBitten = false;
-    }
-    
-    eat() {
-        this.isBitten = true;
-        super.eat();
-    }
-    
-    
-}
-```
-
 ### Let & Const
 Anteriormente en Javascript se declaraban las variables usando la keyword `var`.
 `let` es el nuevo `var` mejorando problemas de scoping mientras `const` permite solamente asignar la "constante" una vez.
@@ -183,6 +160,8 @@ for (let hero of heroes) {
 //          Thor
 //          Black Widow
 ```
+
+
 # Typescript
 
 * Lenguaje de programación libre y de código abierto.
@@ -288,6 +267,75 @@ let name: string = undefined;
 let firstName: string = null;
 ```
 
-### TS Clases 
+### Clases
+Las clases soportan herencia, super calls, instanciar objetos, métodos estáticos y constructores
+``` typescript
+class Apple extends Fruit {
+
+    isBitten: boolean;
+    
+    constructor(color) {
+        super(color);
+        this.taste = 'sweet';
+        this.hasSeeds = true;
+        this.isBitten = false;
+    }
+    
+    eat() {
+        this.isBitten = true;
+        super.eat();
+    }
+    
+    
+}
+```
 
 ### Interfaces
+``` typescript
+interface Animal {
+    kind: string;
+    weight: number;
+}
+
+let dog: Animal;
+
+dog = {
+    kind: 'mammal',
+    weight: 10,
+}; // ✅
+
+dog = {
+    kind: true,
+    weight: 10,
+}; // ❌ - kind should be a string
+```
+
+### Union Type
+Hay ocasiones en las que una variable puede tener multiplos tipos, para esto se usa el union type.
+
+``` typescript
+log(message: string | number): void {
+ console.log(msg);
+}
+```
+
+### Intersection Type
+Combina multiples tipos juntos.
+
+``` typescript
+type Student = {
+    id: string;
+    age: number;
+};
+
+type Employee = {
+    companyId: string;
+};
+
+let person: Student & Employee;
+
+person.age = 21; // ✅
+person.companyId = 'SP302334'; // ✅
+person.id = '10033402'; // ✅
+person.name = 'Henry'; // ❌
+```
