@@ -5,6 +5,7 @@
 * Javascript Moderno
 
   * [Funciones Flecha](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#funciones-flecha)
+  * [Clases](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#clases)
   * [Let & Const](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#let--const)
   * [Destructuración](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#destructuraci%C3%B3n)
   * [Parametro con valor por defecto](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#parametro-con-valor-por-defecto)
@@ -26,11 +27,8 @@
     * [Void](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#void)
     * [Null o Undefined](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#null-o-undefined)
     * Mas información [aquí](https://www.typescriptlang.org/docs/handbook/basic-types.html)
-  * [Clases](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#clases)
+  * [Clases](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#ts-clases)
   * [Interfaces](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#interfaces)
-  * [Union Type](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#union-type)
-  * [Intersection Type](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#intersection-type)
-  * [Optional](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#optional)
 
 
 ## Javascript Moderno
@@ -48,7 +46,7 @@ function Persona() {
   var self = this;
   self.edad = 0;
 
-  setInterval(function crecer() {
+  setInterval(function growUp() {
     self.edad++;
   }, 1000);
 }
@@ -56,12 +54,14 @@ function Persona() {
 
 Ahora:
 ``` javascript
-function Persona(){
-  this.edad = 0;
-
-  setInterval(() => {
-    this.edad++;
-  }, 1000);
+class Persona {
+  edad = 0;
+  
+  constructor() {
+    setInterval(() => {
+      this.edad++;
+    }, 1000);
+  }
 }
 ```
 
@@ -93,7 +93,7 @@ let [one, two, three] = foo; // asignación en una sola linea
 ### Parametro con valor por defecto
 Permite definir funciones con un(os) parametro(s) con valores por defecto
 ``` typescript
-fight(hero, villian, location = 'Earth') {
+fight(hero: string, villian: string, location = 'Earth') {
     console.log(`Fighting: ${hero} vs ${villian} on ${location}`);
 }
 
@@ -106,7 +106,7 @@ fight('Captain America', 'Thanos');
 ### Parametros Rest
 Permite representar un número indefinido de elementos
 ``` typescript
-eat(protein, fruit, ...sweets) {
+eat(protein: string, fruit: string, ...sweets: string[]) {
     console.log(`Eating: ${protein} with ${fruit} and ${sweets}`);
 }
 
