@@ -166,7 +166,7 @@ for (let hero of heroes) {
 //          Thor
 //          Black Widow
 ```
-## Typescript
+# Typescript
 
 * Lenguaje de programación libre y de código abierto.
 * Desarrollado y mantenido por Microsoft.
@@ -176,14 +176,15 @@ for (let hero of heroes) {
 
 
 ## Tipos de datos
-### boolean:
+
+### Boolean:
 
 ``` typescript
 let isAwesome: boolean = true;
 ```
 
-### string:
-cadenas de texto, rodeadas por ', " o `
+### String:
+Cadenas de texto, rodeadas por (`'`), (`"`) o (`)
 
 ``` typescript
 let name: string = 'Doe';
@@ -195,10 +196,11 @@ El usar `` (back ticks) se conoce como template literal y se puede realizar inte
 ``` typescript
 let age: number = 22;
 let information: `Jon Doe, Age: ${age}`
+// information: Jon Doe, Age: 22
 ```
 
-### number:
-permite almacenar enteros o números flotantes, en notación decimal, binaria, ocatl o hexadecimal
+### Number:
+Permite almacenar enteros o números flotantes, en notación decimal, binaria, ocatl o hexadecimal
 ``` typescript
 let decimalNumber: number = 42;
 let binaryNumber: number = 0b101010; // => 42
@@ -206,14 +208,14 @@ let octalNumber: number = 0o52; // => 42
 let hexadecimalNumber: number = 0x2a; // => 42
 ```
 
-### array
+### Array
 ``` typescript
 let heroes: string[] = [ 'Iron Man', 'Captain America', 'Thor', 'Black Widow' ];
 let fibonacci: number[] = [ 1, 2, 3, 5, 8 ];
 ```
 
-### tuple:
-arreglo que contiene un número fijo de elementos de un tipo especificado
+### Tuple:
+Arreglo que contiene un número fijo de elementos de un tipo especificado
 ``` typescript
 let myFavoriteTuple: [string, number, boolean];
 
@@ -221,7 +223,7 @@ myFavoriteTuple = ['chair', 20, true]; // ✅
 myFavoriteTuple = [5, 20, true]; // ❌ el elemento de la posición 0 no es un string!
 ```
 
-### enum:
+### Enum:
 Por defecto asocian números (desde el 0 incrementando de 1 en 1) a cada miembro del enum
 ``` typescript
 enum Sizes {
@@ -243,7 +245,7 @@ enum ThemeColors {
 }
 ```
 
-### any:
+### Any:
 Tipo de variable usado cuando no se conoce el tipo especifico
 ``` typescript
 let foo: any = 4;
@@ -253,15 +255,16 @@ foo = false;
 ```
 Nota: Es recomendable no utilizar any mucho, pues si el compilador no sabe el tipo de datos se pierde una de las grandes ventajas de TS.
 
-### void:
+### Void:
+`void` es un poco como lo opuesto a `any`. Por lo general, puede ver esto como el tipo de retorno de funciones que no devuelven un valor
 ``` typescript
 logger(msg: string): void {
   console.log(msg);
 }
 ```
 
-### null o undefined:
-son subtipos de los otros tipos, por lo que a lass variables de tipo string, number, o boolean se les puede asignar un valor de null o undefined.
+### Null o Undefined:
+Son subtipos de los otros tipos, por lo que a las variables de tipo `string`, `number` o `boolean` se les puede asignar un valor de `null` o `undefined`.
 ``` typescript
 let hello: undefined = undefined; // realmente no es muy util usarlo de esta forma
 let name: string = undefined;
