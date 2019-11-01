@@ -1,16 +1,28 @@
-# Dia 1
-## Typescript
-* Lenguaje de programación libre y de código abierto.
-* Desarrollado y mantenido por Microsoft.
-* Es un superset de Javascript.
-* Añade tipos estáticos y objetos basados en clases.
-* Este código se transpila a Javascript.
+# Día 1
+
+## Introducción
+
+
 
 ## Javascript Moderno
-Como Typescript es un super set de Javascript es importante conocer las nuevas funcionalidades y sintaxis del mismo.
+
+Ya que Angular es un framework javascript es importante conocer las nuevas funcionalidades y sintaxis del mismo.
+
+Entre las nuevas características están:
+
+* [Funciones Flecha](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#funciones-flecha)
+* [Clases](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#clases)
+* [Let & Const](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#let--const)
+* [Destructuración](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#destructuraci%C3%B3n)
+* [Parametro con valor por defecto](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#parametro-con-valor-por-defecto)
+* [Parametros Rest](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#parametros-rest)
+* [Operador de propagación (Spread)](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#operador-de-propagaci%C3%B3n-spread)
+* [For..Of](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#for-of)
+* Más información [aquí](https://github.com/lukehoban/es6features#readme)
 
 ### Funciones flecha
 Permite declarar funciones de forma corta y resolver el problema de scoping del this que se presentaba previamente en Javascript.
+
 Antes:
 ``` javascript
 function Persona() {
@@ -35,7 +47,7 @@ function Persona(){
 ```
 
 ### Clases
-Soportan herencia, super calls, instanciar objetos, métodos estáticos y constructores
+Las clases soportan herencia, super calls, instanciar objetos, métodos estáticos y constructores
 ``` javascript
 class Apple extends Fruit {
 
@@ -58,8 +70,8 @@ class Apple extends Fruit {
 ```
 
 ### Let & Const
-Anteriormente en Javascript se declaraban las variables usando la keyword var.
-Let es el nuevo var mejorando problemas de scoping mientras const permite solamente asignar la "constante" una vez.
+Anteriormente en Javascript se declaraban las variables usando la keyword `var`.
+`let` es el nuevo `var` mejorando problemas de scoping mientras `const` permite solamente asignar la "constante" una vez.
 ``` typescript
 let name = 'Jon';
 name = 'Jon Doe'; // ✅
@@ -89,19 +101,23 @@ fight(hero, villian, location = 'Earth') {
     console.log(`Fighting: ${hero} vs ${villian} on ${location}`);
 }
 
-fight('Iron Man', 'Thanos', 'Titan'); 
+fight('Iron Man', 'Thanos', 'Titan');
+// Output: Fighting: Iron Man vs Thanos on Titan
 fight('Captain America', 'Thanos');
+// Output: Fighting: Captain America vs Thanos on Earth
 ```
 
 ### Parametros Rest
 Permite representar un número indefinido de elementos
 ``` typescript
-eat(protein, juice, ...sweets) {
-    console.log(`Eating: ${protein} with ${fruit} and ${sweets});
+eat(protein, fruit, ...sweets) {
+    console.log(`Eating: ${protein} with ${fruit} and ${sweets}`);
 }
 
-eat('chicken', 'mango);
+eat('chicken', 'mango');
+// Output: Eating: chicken with mango and 
 eat('meat', 'lemonade', 'chocolate', 'm&m');
+// Output: Eating: meat with lemonade and chocolate,m&m
 ```
 
 ### Operador de propagación (spread)
@@ -143,6 +159,14 @@ for (let hero of heroes) {
     console.log(hero);
 }
 ```
+## Typescript
+
+* Lenguaje de programación libre y de código abierto.
+* Desarrollado y mantenido por Microsoft.
+* Es un superset de Javascript.
+* Añade tipos estáticos y objetos basados en clases.
+* Este código se transpila a Javascript.
+
 
 ## Tipos de datos
 ### boolean:
