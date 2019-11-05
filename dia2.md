@@ -46,6 +46,14 @@ rxjs                         6.4.0
 
 Angular es un framework para la creación de páginas web SPA(Single Page Aplication) lo que quiere decir es que se carga todo a la vez en una misma página y Angular lo que hace es cambiar la vista al navegar y dar la apariencia de una web normal.
 
+## Crear un proyecto
+
+Nos ubicamos en la carperta donde queremos crear el proyecto y ejecutamos el siguiente comando en la consola.
+
+```
+ng new <nombre-del-proyecto>
+```
+
 ## Conceptos Importantes
 
 ### Modulos
