@@ -67,16 +67,16 @@ Al crear el proyecto el CLI nos va a preguntar si queremos agregar `Angular Rout
 
 | Archivo/Carpeta    | Descripción   |
 | -------------      | ------------- |
-| e2e/               |               |
-| node_modules/      |               |
-| src/               |               |
+| e2e/               | Este folder contiente todos los archivos usados para hacer pruebas end-to-end, que son pruebas para verificar el flujo completo de un sistema. |
+| node_modules/      | En este folder se descargan todas la librerias usadas en el proyecto.|
+| src/               | En este folder es donde vamos a agregar el código de nuestra aplicación.|
 | .editorconfig      | Archivo de configuracion de formato compatible con varios editores [Más Info](https://editorconfig.org/)|
 | .gitignore         | Determina que archivos deben ser ignorados por git|
-| angular.json       | Archivo de configuración del proyecto(s) Angular, incluye la configuración del `build`, `serve` y `test`                            |
-| browserlist        |               |
+| angular.json       | Archivo de configuración del proyecto(s) Angular, incluye la configuración del `build`, `serve` y `test` |
+| browserlist        | El sistema de compilación utiliza este archivo para ajustar la salida de CSS y JS para admitir los navegadores especificados [Más Info](https://github.com/browserslist/browserslist#queries).|
 | karma.conf.js      |               |
-| package-lock.json  |               |
-| package.json       |               |
+| package-lock.json  | Este archivo nos muestra información mas detallada de los paquetes de npm que tenemos instalados en el proyecto.              |
+| package.json       | En este archivo definimos toda las librerias/paquetes de terceros usadas en el desarrollo y en la ejecución del proyeto |
 | README.md          | Archivo de documentación por defecto   |
 | tsconfig.app.json  |               |
 | tsconfig..json     |               |
