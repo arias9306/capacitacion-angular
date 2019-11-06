@@ -63,25 +63,25 @@ Al crear el proyecto el CLI nos va a preguntar si queremos agregar `Angular Rout
 
 ## Estructura del proyecto
 
-![alt text](https://raw.githubusercontent.com/arias9306/capacitacion-angular/master/img/project-structure.jpg "Estructura del Projecto")
+![alt text](https://raw.githubusercontent.com/arias9306/capacitacion-angular/master/img/project-structure.jpg "Estructura del Proyecto")
 
-| Archivo/Carpeta    | Descripción                            |
-| -------------      | -------------                          |
-| e2e/               |                           |
-| node_modules/      |                                |
-| src/               |                                |
+| Archivo/Carpeta    | Descripción   |
+| -------------      | ------------- |
+| e2e/               |               |
+| node_modules/      |               |
+| src/               |               |
 | .editorconfig      | Archivo de configuracion de formato compatible con varios editores [Más Info](https://editorconfig.org/)|
 | .gitignore         | Determina que archivos deben ser ignorados por git|
 | angular.json       | Archivo de configuración del proyecto(s) Angular, incluye la configuración del `build`, `serve` y `test`                            |
-| browserlist        |                                |
-| karma.conf.js      |                                |
-| package-lock.json  |                                |
-| package.json       |                                |
+| browserlist        |               |
+| karma.conf.js      |               |
+| package-lock.json  |               |
+| package.json       |               |
 | README.md          | Archivo de documentación por defecto   |
-| tsconfig.app.json  |                                |
-| tsconfig..json     |                                |
-| tsconfig.spec.json |                                |
-| tslint.json        |                                |
+| tsconfig.app.json  |               |
+| tsconfig..json     |               |
+| tsconfig.spec.json |               |
+| tslint.json        |               |
 
 ## Conceptos Importantes
 
