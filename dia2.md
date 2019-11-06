@@ -10,7 +10,7 @@
   ```
   v10.15.1 o v12.13.0
   ```
-  
+
 ### Angular-CLI
   ```
   ng --version
@@ -23,13 +23,13 @@
    / ___ \| | | | (_| | |_| | | (_| | |      | |___| |___ | |
  /_/   \_\_| |_|\__, |\__,_|_|\__,_|_|       \____|_____|___|
                  |___/
-    
+
 
 Angular CLI: 8.3.15
 Node: 10.15.1
 OS: darwin x64
-Angular: 
-... 
+Angular:
+...
 
 Package                      Version
 ------------------------------------------------------
@@ -54,12 +54,41 @@ Nos ubicamos en la carperta donde queremos crear el proyecto y ejecutamos el sig
 ng new <nombre-del-proyecto>
 ```
 
+Al crear el proyecto el CLI nos va a preguntar si queremos agregar `Angular Routing`, pero por le momento le decimos que no, tambien nos va a preguntar cual es el formato que vamos a manejar para nuestros estilos, vamos a seleccionar `CSS`.
+
+```
+? Would you like to add Angular routing? No
+? Which stylesheet format would you like to use? CSS
+```
+
+## Estructura del proyecto
+
+![alt text](https://raw.githubusercontent.com/arias9306/capacitacion-angular/master/img/project-structure.jpg "Estructura del Projecto")
+
+| Archivo/Carpeta    | Descripción                            |
+| -------------      | -------------                          |
+| e2e/               |                           |
+| node_modules/      |                                |
+| src/               |                                |
+| .editorconfig      | Archivo de configuracion de formato compatible con varios editores [Más Info](https://editorconfig.org/)|
+| .gitignore         | Determina que archivos deben ser ignorados por git|
+| angular.json       | Archivo de configuración del proyecto(s) Angular, incluye la configuración del `build`, `serve` y `test`                            |
+| browserlist        |                                |
+| karma.conf.js      |                                |
+| package-lock.json  |                                |
+| package.json       |                                |
+| README.md          | Archivo de documentación por defecto   |
+| tsconfig.app.json  |                                |
+| tsconfig..json     |                                |
+| tsconfig.spec.json |                                |
+| tslint.json        |                                |
+
 ## Conceptos Importantes
 
 ### Modulos
 
 
-### Componentes 
+### Componentes
 Los componentes son lo elementos que se muestran en pantalla, pueden ser una pagina completa o un conjunto de elementos que Angular puede elegir y modificar según la logica y los datos de la aplicación.
 
 ### Directivas
