@@ -108,6 +108,19 @@ Al crear el proyecto el CLI nos va a preguntar si queremos agregar `Angular Rout
 | styles.css         |      |
 | test.ts            |      |
 
+
+### App Folder
+
+![alt text](https://raw.githubusercontent.com/arias9306/capacitacion-angular/master/img/project-structure_2.jpg 'Estructura del app folder')
+
+| Archivo/Carpeta       | Descripción  |
+| --------------------- | ------------ |
+| app.component.css     |              |
+| app.component.html    |              |
+| app.component.spec.ts |              |
+| app.component.ts      |              |
+| app.module.ts         |              |
+
 ## Conceptos Importantes
 
 ### Modulos
