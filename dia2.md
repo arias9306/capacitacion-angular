@@ -1,5 +1,21 @@
 # Día 2
 
+* [Verificar la Instalación](https://github.com/arias9306/capacitacion-angular/blob/master/dia2.md#verificar-instalaci%C3%B3n)
+* [Que es Angular](https://github.com/arias9306/capacitacion-angular/blob/master/dia2.md#que-es-angular)
+* [Crear un proyecto](https://github.com/arias9306/capacitacion-angular/blob/master/dia2.md#crear-un-proyecto)
+* [Estructura del Proyecto](https://github.com/arias9306/capacitacion-angular/blob/master/dia2.md#estructura-del-proyecto)
+  * [Root](https://github.com/arias9306/capacitacion-angular/blob/master/dia2.md#root)
+  * [Source Folder](https://github.com/arias9306/capacitacion-angular/blob/master/dia2.md#source-folder)
+  * [App Folder](https://github.com/arias9306/capacitacion-angular/blob/master/dia2.md#app-folder)
+* [Conceptos Importantes](https://github.com/arias9306/capacitacion-angular/blob/master/dia2.md#conceptos-importantes)
+  * [Decoradores](https://github.com/arias9306/capacitacion-angular/blob/master/dia2.md#decoradores)
+    * [Decoradores de Clase](https://github.com/arias9306/capacitacion-angular/blob/master/dia2.md#decoradores-de-clase)
+    * [Decoradores de Propiedad](https://github.com/arias9306/capacitacion-angular/blob/master/dia2.md#decoradores-de-propiedad)
+  * [Modulos](https://github.com/arias9306/capacitacion-angular/blob/master/dia2.md#modulos)
+  * [Componentes](https://github.com/arias9306/capacitacion--angular/blob/master/dia2.md#Componentes)
+* [Interpolación](https://github.com/arias9306/capacitacion-angular/blob/master/dia2.md#interpolaci%C3%B3n)
++ [Proyecto](https://github.com/arias9306/capacitacion-angular/blob/master/dia2.md#proyecto)
+
 ## Verificar Instalación
 
 ### Node
