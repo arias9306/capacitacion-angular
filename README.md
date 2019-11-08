@@ -15,7 +15,7 @@
 
   > **NOTA:** La extensión de _Angular Essentials_ instala una extensión que se ejecuta en el puerto 8888
 
-## [Día 1](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md)
+## [Día 1: Introducción](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md)
 
 * [Javascript Moderno](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#javascript-moderno)
 
@@ -47,17 +47,21 @@
   * [Intersection Type](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#intersection-type)
   * [Optional](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#optional)
 
-## [Día 2](https://github.com/arias9306/capacitacion-angular/blob/master/dia2.md#d%C3%ADa-2)
+## [Día 2: Básico](https://github.com/arias9306/capacitacion-angular/blob/master/dia2.md#d%C3%ADa-2)
 
+* [Verificar la Instalación](https://github.com/arias9306/capacitacion-angular/blob/master/dia2.md#verificar-instalaci%C3%B3n)
 * [Que es Angular](https://github.com/arias9306/capacitacion-angular/blob/master/dia2.md#que-es-angular)
+* [Crear un proyecto](https://github.com/arias9306/capacitacion-angular/blob/master/dia2.md#crear-un-proyecto)
+* [Estructura del Proyecto](https://github.com/arias9306/capacitacion-angular/blob/master/dia2.md#estructura-del-proyecto)
+  * [Root](https://github.com/arias9306/capacitacion-angular/blob/master/dia2.md#root)
+  * [Source Folder](https://github.com/arias9306/capacitacion-angular/blob/master/dia2.md#source-folder)
+  * [App Folder](https://github.com/arias9306/capacitacion-angular/blob/master/dia2.md#app-folder)
 * [Conceptos Importantes](https://github.com/arias9306/capacitacion-angular/blob/master/dia2.md#conceptos-importantes)
-  * [Componentes](https://github.com/arias9306/capacitacion-angular/blob/master/dia2.md#componentes)
-  * [Modulos](https://github.com/arias9306/capacitacion-angular/blob/master/dia2.md#modulos)
-  * [Directivas](https://github.com/arias9306/capacitacion-angular/blob/master/dia2.md#directivas)
-  * [Pipes](https://github.com/arias9306/capacitacion-angular/blob/master/dia2.md#pipes)
   * [Decoradores](https://github.com/arias9306/capacitacion-angular/blob/master/dia2.md#decoradores)
-  * [Servicios](https://github.com/arias9306/capacitacion-angular/blob/master/dia2.md#servicios)
-* [Crear Proyecto con el CLI](https://github.com/arias9306/capacitacion-angular/blob/master/dia2.md#crear-proyecto-con-el-cli)
+    * [Decoradores de Clase](https://github.com/arias9306/capacitacion-angular/blob/master/dia2.md#decoradores-de-clase)
+    * [Decoradores de Propiedad](https://github.com/arias9306/capacitacion-angular/blob/master/dia2.md#decoradores-de-propiedad)
+  * [Modulos](https://github.com/arias9306/capacitacion-angular/blob/master/dia2.md#modulos)
+  * [Componentes](https://github.com/arias9306/capacitacion-
 * [Interpolación](https://github.com/arias9306/capacitacion-angular/blob/master/dia2.md#interpolaci%C3%B3n)
 + [Proyecto](https://github.com/arias9306/capacitacion-angular/blob/master/dia2.md#proyecto)
 
