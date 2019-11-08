@@ -176,11 +176,43 @@ Las propiedades mas importantes del decorador `@NgModule()` son:
 - `exports`: En este array declaramos los componentes, directivas y pipes que queremos que sean visibles y utilizables por otros módulos.
 - `imports`: En este array declaramos los otros módulos que queremos usar en este módulo.
 - `providers`: En este array se definen todos los servicios haciendolos accesibles para toda la aplicación. (Tambien se pueden definir los servicios a nivel global directamente en la clase, normalmente es la opción mas usada).
-- `bootstrap`: En esta propiedad se define la vista principal, la es que es encargada de alojar a las demas vistas.
+- `bootstrap`: En esta propiedad se define la vista principal, la que se encarga de alojar a las demás vistas.
 
 ### Componentes
 
-Los componentes son lo elementos que se muestran en pantalla, pueden ser una pagina completa o un conjunto de elementos que Angular puede elegir y modificar según la logica y los datos de la aplicación.
+Los componentes son las clases con del decorador `@Component()`,
+los componentes son lo elementos que se muestran en pantalla, pueden ser una pagina completa o un conjunto de elementos que Angular puede elegir y modificar según la logica y los datos de la aplicación.
+
+``` typescript
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+  // lógica
+}
+```
+Las propiedades mas importantes del decorador `@Component()` son:
+- `selector`: Esta propiedada funciona como in selector de CSS que le dice a Angular que cree e inserte una instancia de este componente donde encuentre la etiqueta correspondiente en la plantilla HTML.
+- `templateUrl`: En esta propiedad se establece la ruta relativa al template HTML de este componente. Alternativamente, puede proporcionar el template HTML directamente en la propiedad usando la propiedad `template` y usando las comillas back ticks con el HTML.
+
+  Ejemplo:
+  ```typescript
+  @Component({
+  selector: 'app-root',
+  template: `
+          <h1>Capacitación Angular</h1>
+          <h2>Template en linea<h2>
+  `,
+  styleUrls: ['./app.component.css']
+  })
+  export class AppComponent {
+    // lógica
+  }
+  ```
+- `styleUrls`: En este array definimos las rutas relativas de las hojas de estilos que se van a usar en el componente. Al igual que con el templateUrl se puede definir en el mismo archivo usando la propiedad `style`.
+
 
 ## Interpolación
 
