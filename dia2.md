@@ -139,11 +139,11 @@ El decorador de clase se ubica antes de la definición de la clase, declarando d
 
 Angular cuenta con los siguientes decoradores:
 
-- @Component()
-- @Directive()
-- @Pipe()
-- @Injectable()
-- @NgModule()
+- `@Component()`
+- `@Directive()`
+- `@Pipe()`
+- `@Injectable()`
+- `@NgModule()`
 
 #### Decoradores de propiedad
 
@@ -151,10 +151,13 @@ El decorador de propiedad se ubica antes de la definición de la propiedad.
 
 Ejemplos:
 
-- @Input
-- @Output
+- `@Input`
+- `@Output`
 
-### Modulos
+### Módulos
+
+Los módulos son clases con el decorador `@NgModule()`,
+oos módulos nos sirven principalmente para organizar el código de las aplicaciones en los módulos podemos declara componentes, directivas, pipes, servicios, tambien importar y exportar funcionalides de otros módulos.
 
 ### Componentes
 
