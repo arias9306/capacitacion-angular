@@ -117,13 +117,13 @@ Al crear el proyecto el CLI nos va a preguntar si queremos agregar `Angular Rout
     <img src="https://raw.githubusercontent.com/arias9306/capacitacion-angular/master/img/project-structure_2.jpg" alt="Estructura folder app" />
 </p>
 
-| Archivo/Carpeta       | Descripción |
-| --------------------- | ----------- |
-| app.component.css     |             |
-| app.component.html    |             |
-| app.component.spec.ts |             |
-| app.component.ts      |             |
-| app.module.ts         |             |
+| Archivo/Carpeta       | Descripción                                                                                                                                                                                                                   |
+| --------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| app.component.css     | En este archivo de definen los estilos que solo aplican al componente app.                                                                                                                                                    |
+| app.component.html    | En este archivo se definen el template en HTML del componente app.                                                                                                                                                            |
+| app.component.spec.ts | En este archivo se definen los test unitarios del componente app.                                                                                                                                                             |
+| app.component.ts      | En este archivo se define la lógica del componente app.                                                                                                                                                                       |
+| app.module.ts         | En este archivo se define el modulo principal del proyecto, denominado AppModule, es el encargado de decirle a Angular como ensamblar la aplicación. En este archivo se deben de declarar todos los componentes del proyecto. |
 
 ## Conceptos Importantes
 
