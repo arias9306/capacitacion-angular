@@ -159,6 +159,32 @@ Ejemplos:
 Los módulos son clases con el decorador `@NgModule()`,
 oos módulos nos sirven principalmente para organizar el código de las aplicaciones en los módulos podemos declara componentes, directivas, pipes, servicios, tambien importar y exportar funcionalides de otros módulos.
 
+```typescript
+@NgModule({
+  declarations: [
+    AppComponent,
+    AlertComponent
+  ],
+  imports: [
+    BrowserModule
+  ],
+  exports:[
+    AlertComponent
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+```
+
+Las propiedades mas importantes del decorador `@NgModule()` son:
+
+- `declarations`: En este array debemos declarar los componentes, directivas y pipes que pertencen al el módulo.
+- `exports`: En este array declaramos los componentes, directivas y pipes que queremos que sean visibles y utilizables por otros módulos.
+- `imports`: En este array declaramos los otros módulos que queremos usar en este módulo.
+- `providers`: En este array se definen todos los servicios haciendolos accesibles para toda la aplicación. (Tambien se pueden definir los servicios a nivel global directamente en la clase, normalmente es la opción mas usada).
+- `bootstrap`: En esta propiedad se define la vista principal, la es que es encargada de alojar a las demas vistas.
+
 ### Componentes
 
 Los componentes son lo elementos que se muestran en pantalla, pueden ser una pagina completa o un conjunto de elementos que Angular puede elegir y modificar según la logica y los datos de la aplicación.
