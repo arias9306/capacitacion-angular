@@ -71,9 +71,9 @@ Al crear el proyecto el CLI nos va a preguntar si queremos agregar `Angular Rout
 
 ### Root
 
-<center>
+<p align="center">
     <img src="https://raw.githubusercontent.com/arias9306/capacitacion-angular/master/img/project-structure.jpg" alt="Estructura del Proyecto" />
-</center>
+</p>
 
 | Archivo/Carpeta    | Descripción                                                                                                                                                                                    |
 | ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -95,9 +95,9 @@ Al crear el proyecto el CLI nos va a preguntar si queremos agregar `Angular Rout
 
 ### Source Folder
 
-<center>
+<p align="center">
     <img src="https://raw.githubusercontent.com/arias9306/capacitacion-angular/master/img/project-structure_1.jpg" alt="Estructura folder src" />
-</center>
+</p>
 
 | Archivo/Carpeta | Descripción                                                                                                                        |
 | --------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
@@ -113,9 +113,9 @@ Al crear el proyecto el CLI nos va a preguntar si queremos agregar `Angular Rout
 
 ### App Folder
 
-<center>
+<p align="center">
     <img src="https://raw.githubusercontent.com/arias9306/capacitacion-angular/master/img/project-structure_2.jpg" alt="Estructura folder app" />
-</center>
+</p>
 
 | Archivo/Carpeta       | Descripción |
 | --------------------- | ----------- |
