@@ -230,6 +230,22 @@ Las propiedades mas importantes del decorador `@Component()` son:
 - `styleUrls`: En este array definimos las rutas relativas de las hojas de estilos que se van a usar en el componente. Al igual que con el templateUrl se puede definir en el mismo archivo usando la propiedad `style`.
 
 
-## Interpolación
+## Crear un Componente
+
+Los componentes los podemos crear de 2 formas, una se podría decir que es a mano, eso significa crear archivo por archivo, lo cual implica que debemos crear una carpeta dentro de el app folder ya que ese es el estandar como lo vemos en la siguiente imagen, Ademas de agregar el componente al `AppModule` para poderlo usar en nuestro proyecto.
+
+<p align="center">
+    <img src="https://raw.githubusercontent.com/arias9306/capacitacion-angular/master/img/project-structure_3.jpg" alt="Componente nuevo" />
+</p>
+
+Pero realmente lo mas recomendable es usar el `Angular CLI`, con el siguiente comando podemos crear componenten en nuestro proyecto.
+
+```
+ng generate component <nombre-del-componente>
+```
+o podemos usar la versión corta
+```
+ng g c <nombre-del-componente>
+```
 
 # Proyecto
