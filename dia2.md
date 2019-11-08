@@ -91,35 +91,33 @@ Al crear el proyecto el CLI nos va a preguntar si queremos agregar `Angular Rout
 | tsconfig.spec.json | Configuración prederterminada de TypeSctipt para las pruebas.                                                                                                                                  |
 | tslint.json        | Configuración de TSLint (Herramienta de análisis estático de código TS) de la aplicación. [Más Info](https://palantir.github.io/tslint/)                                                       |
 
-
 ### Source Folder
 
 ![alt text](https://raw.githubusercontent.com/arias9306/capacitacion-angular/master/img/project-structure_1.jpg 'Estructura del src folder')
 
-| Archivo/Carpeta    | Descripción  |
-| ------------------ | ------------ |
-| app                |      |
-| assets             |      |
-| environments       |      |
-| favicon.ico        |      |
-| index.html         |      |
-| main.ts            |      |
-| polyfills.ts       |      |
-| styles.css         |      |
-| test.ts            |      |
-
+| Archivo/Carpeta | Descripción                                                                                                                       |
+| --------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| app             | Dentro de este folder van los componentes y lógica de nuestro proyecto.                                                           |
+| assets          | En este folder podemos incluir imágenes y otros archivos.                                                                         |
+| environments    | Contiene opciones de configuración de compilación para diferentes environments. (prod, dev, QA, etc..).                           |
+| favicon.ico     | El icono que se muestra en la pestaña de los navegadores.                                                                         |
+| index.html      | La página principal de nuestro proyecto, este es el archivo que es entregado por el servidor, cuando se accede a nuestro proyecto. |
+| main.ts         | Archivo de entrada al proyecto, es el que se encarga de arrancar el módulo principal.                                                                                                                                   |
+| polyfills.ts    | Archivo que provee los polyfills para el soporte del navegador.                                                                                                                                   |
+| styles.css      | Archivo de estilos globales para el proyecto.                                                                                                                                 |
+| test.ts         |  Archivo de configuración de los test del proyecto.                                                                                                                                 |
 
 ### App Folder
 
 ![alt text](https://raw.githubusercontent.com/arias9306/capacitacion-angular/master/img/project-structure_2.jpg 'Estructura del app folder')
 
-| Archivo/Carpeta       | Descripción  |
-| --------------------- | ------------ |
-| app.component.css     |              |
-| app.component.html    |              |
-| app.component.spec.ts |              |
-| app.component.ts      |              |
-| app.module.ts         |              |
+| Archivo/Carpeta       | Descripción |
+| --------------------- | ----------- |
+| app.component.css     |             |
+| app.component.html    |             |
+| app.component.spec.ts |             |
+| app.component.ts      |             |
+| app.module.ts         |             |
 
 ## Conceptos Importantes
 
