@@ -3,26 +3,32 @@
 ## Verificar Instalación
 
 ### Node
-  ```
-  node -v
-  ```
-  Resultado
-  ```
-  v10.15.1 o v12.13.0
-  ```
+
+```
+node -v
+```
+
+Resultado
+
+```
+v10.15.1 o v12.13.0
+```
 
 ### Angular-CLI
-  ```
-  ng --version
-  ```
-  Resultado
-  ```
-      _                      _                 ____ _     ___
-     / \   _ __   __ _ _   _| | __ _ _ __     / ___| |   |_ _|
-    / △ \ | '_ \ / _` | | | | |/ _` | '__|   | |   | |    | |
-   / ___ \| | | | (_| | |_| | | (_| | |      | |___| |___ | |
- /_/   \_\_| |_|\__, |\__,_|_|\__,_|_|       \____|_____|___|
-                 |___/
+
+```
+ng --version
+```
+
+Resultado
+
+```
+    _                      _                 ____ _     ___
+   / \   _ __   __ _ _   _| | __ _ _ __     / ___| |   |_ _|
+  / △ \ | '_ \ / _` | | | | |/ _` | '__|   | |   | |    | |
+ / ___ \| | | | (_| | |_| | | (_| | |      | |___| |___ | |
+/_/   \_\_| |_|\__, |\__,_|_|\__,_|_|       \____|_____|___|
+               |___/
 
 
 Angular CLI: 8.3.15
@@ -40,7 +46,7 @@ Package                      Version
 @schematics/update           0.803.15
 rxjs                         6.4.0
 
-  ```
+```
 
 ## Que es Angular
 
@@ -63,25 +69,44 @@ Al crear el proyecto el CLI nos va a preguntar si queremos agregar `Angular Rout
 
 ## Estructura del proyecto
 
+### Root
+
 ![alt text](https://raw.githubusercontent.com/arias9306/capacitacion-angular/master/img/project-structure.jpg 'Estructura del Proyecto')
 
 | Archivo/Carpeta    | Descripción                                                                                                                                                                                    |
 | ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| e2e/               | Este folder contiene todos los archivos usados para hacer pruebas end-to-end, que son pruebas para verificar el flujo completo de un sistema.                                                 |
+| e2e/               | Este folder contiene todos los archivos usados para hacer pruebas end-to-end, que son pruebas para verificar el flujo completo de un sistema.                                                  |
 | node_modules/      | En este folder se descargan todas la librerías usadas en el proyecto.                                                                                                                          |
 | src/               | En este folder es donde vamos a agregar el código de nuestra aplicación.                                                                                                                       |
 | .editorconfig      | Archivo de configuración de formato compatible con varios editores [Más Info](https://editorconfig.org/)                                                                                       |
-| .gitignore         | Determina que archivos deben ser ignorados por git                                                                                                                                             |
-| angular.json       | Archivo de configuración del proyecto(s) Angular, incluye la configuración del `build`, `serve` y `test`                                                                                       |
+| .gitignore         | Determina que archivos deben ser ignorados por git.                                                                                                                                            |
+| angular.json       | Archivo de configuración del proyecto(s) Angular, incluye la configuración del `build`, `serve` y `test`.                                                                                      |
 | browserlist        | El sistema de compilación utiliza este archivo para ajustar la salida de CSS y JS para admitir los navegadores especificados [Más Info](https://github.com/browserslist/browserslist#queries). |
-| karma.conf.js      | Archivo de configuración de Karma (Herramienta de Testing)                                                                                                                                     |
+| karma.conf.js      | Archivo de configuración de Karma (Herramienta de Testing). [Más Info](http://karma-runner.github.io/latest/index.html)                                                                        |
 | package-lock.json  | Este archivo nos muestra información más detallada de los paquetes de npm que tenemos instalados en el proyecto.                                                                               |
-| package.json       | En este archivo definimos toda las librerías/paquetes de terceros usadas en el desarrollo y en la ejecución del proyecto                                                                        |
+| package.json       | En este archivo definimos toda las librerías/paquetes de terceros usadas en el desarrollo y en la ejecución del proyecto                                                                       |
 | README.md          | Archivo de documentación por defecto                                                                                                                                                           |
 | tsconfig.app.json  | Configuración predeterminada de TypeScript para el proyecto.                                                                                                                                   |
 | tsconfig.json      | Configuración predeterminada de Typescript para los proyectos en el workspace.                                                                                                                 |
 | tsconfig.spec.json | Configuración prederterminada de TypeSctipt para las pruebas.                                                                                                                                  |
-| tslint.json        | Configuración de TSLint (Herramienta de análisis estático de código TS) de la aplicación.                                                                                                      |
+| tslint.json        | Configuración de TSLint (Herramienta de análisis estático de código TS) de la aplicación. [Más Info](https://palantir.github.io/tslint/)                                                       |
+
+
+### Source Folder
+
+![alt text](https://raw.githubusercontent.com/arias9306/capacitacion-angular/master/img/project-structure_1.jpg 'Estructura del src folder')
+
+| Archivo/Carpeta    | Descripción  |
+| ------------------ | ------------ |
+| app                |      |
+| assets             |      |
+| environments       |      |
+| favicon.ico        |      |
+| index.html         |      |
+| main.ts            |      |
+| polyfills.ts       |      |
+| styles.css         |      |
+| test.ts            |      |
 
 ## Conceptos Importantes
 
