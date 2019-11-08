@@ -127,26 +127,38 @@ Al crear el proyecto el CLI nos va a preguntar si queremos agregar `Angular Rout
 
 ## Conceptos Importantes
 
+### Decoradores
+
+Los decoradores son funciones que modifican la definición de una clase o una propiedad, también conocidos como `Anotaciones` en otros lenguajes.
+
+Angular define decoradores que adjuntan metadatos a clases o propiedades para que sepa qué significan esas clases o propiedades y cómo deberían funcionar.
+
+#### Decoradores de Clase
+
+El decorador de clase se ubica antes de la definición de la clase, declarando de que tipo es la clase y proporcionando los metadatos adecuados para el tipo de clase.
+
+Angular cuenta con los siguientes decoradores:
+
+- @Component()
+- @Directive()
+- @Pipe()
+- @Injectable()
+- @NgModule()
+
+#### Decoradores de propiedad
+
+El decorador de propiedad se ubica antes de la definición de la propiedad.
+
+Ejemplos:
+
+- @Input
+- @Output
+
 ### Modulos
 
 ### Componentes
 
 Los componentes son lo elementos que se muestran en pantalla, pueden ser una pagina completa o un conjunto de elementos que Angular puede elegir y modificar según la logica y los datos de la aplicación.
-
-### Directivas
-
-### Pipes
-
-### Decoradores
-
-### Servicios
-
-## Crear Proyecto con el CLI
-
-- Nos Ubicamos en la carpeta donde queremos crear nuestro proyecto, abrimos la consola y ejecutamos el siguiente comando
-  ```
-  ng new <nombre-del-proyecto>
-  ```
 
 ## Interpolación
 
