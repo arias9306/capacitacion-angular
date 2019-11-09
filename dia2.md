@@ -173,7 +173,7 @@ Ejemplos:
 Los módulos son clases con el decorador `@NgModule()`,
 los módulos nos sirven principalmente para organizar el código de las aplicaciones. En los módulos podemos declara componentes, directivas, pipes, servicios, tambien importar y exportar funcionalides de otros módulos.
 
-```typescript
+``` typescript
 @NgModule({
   declarations: [AppComponent, AlertComponent],
   imports: [BrowserModule],
