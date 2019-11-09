@@ -26,6 +26,29 @@ Databinding es el proceso que nos permite comunicar muestros templates HTML con 
 
 ### Interpolación
 
+La interpolación se refiere a incrustar expresiones en texto. Por defecto, la interpolación utiliza como delimitador las llaves dobles, `{{expresión}}`.
+
+Por ejemplo
+
+``` html
+<h3> Autor: {{ authorName }} </h3>
+```
+El texto que se encuetra entre las llaves `{{...}}` corresponde a una variable en archivo `.ts`, pero no en todos los casos tienen que ser variables como ya lo mensioné antes lo que se encuentra dentro de las llaves corresponde a un expresión como por ejemplo.
+
+``` html
+<h3> El resultado de la suma de 1 + 1 es : {{ 1 + 1 }} </h3>
+```
+
+``` html
+<h3> Autor : {{ 'Dante Alighieri' }} </h3>
+```
+También podemos invocar metodos que se encuentren en el archivo `.ts` como se ve en el siguiente ejemplo.
+
+``` html
+<h3> El valor del contador es : {{ getCounterValue() }} </h3>
+```
+Como dato adicional si nos gustan las llaves `{{...}}` se pueden cambiar en la configuración de los metadatos del compontente usando la propiedad `interpolation`
+
 ### Property Binding
 
 ### Event Binding
