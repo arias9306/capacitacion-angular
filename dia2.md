@@ -1,19 +1,18 @@
 # Día 2
 
-* [Verificar la Instalación](https://github.com/arias9306/capacitacion-angular/blob/master/dia2.md#verificar-instalaci%C3%B3n)
-* [Que es Angular](https://github.com/arias9306/capacitacion-angular/blob/master/dia2.md#que-es-angular)
-* [Crear un proyecto](https://github.com/arias9306/capacitacion-angular/blob/master/dia2.md#crear-un-proyecto)
-* [Estructura del Proyecto](https://github.com/arias9306/capacitacion-angular/blob/master/dia2.md#estructura-del-proyecto)
-  * [Root](https://github.com/arias9306/capacitacion-angular/blob/master/dia2.md#root)
-  * [Source Folder](https://github.com/arias9306/capacitacion-angular/blob/master/dia2.md#source-folder)
-  * [App Folder](https://github.com/arias9306/capacitacion-angular/blob/master/dia2.md#app-folder)
-* [Conceptos Importantes](https://github.com/arias9306/capacitacion-angular/blob/master/dia2.md#conceptos-importantes)
-  * [Decoradores](https://github.com/arias9306/capacitacion-angular/blob/master/dia2.md#decoradores)
-    * [Decoradores de Clase](https://github.com/arias9306/capacitacion-angular/blob/master/dia2.md#decoradores-de-clase)
-    * [Decoradores de Propiedad](https://github.com/arias9306/capacitacion-angular/blob/master/dia2.md#decoradores-de-propiedad)
-  * [Modulos](https://github.com/arias9306/capacitacion-angular/blob/master/dia2.md#modulos)
-  * [Componentes](https://github.com/arias9306/capacitacion--angular/blob/master/dia2.md#Componentes)
-
+- [Verificar la Instalación](https://github.com/arias9306/capacitacion-angular/blob/master/dia2.md#verificar-instalaci%C3%B3n)
+- [Que es Angular](https://github.com/arias9306/capacitacion-angular/blob/master/dia2.md#que-es-angular)
+- [Crear un proyecto](https://github.com/arias9306/capacitacion-angular/blob/master/dia2.md#crear-un-proyecto)
+- [Estructura del Proyecto](https://github.com/arias9306/capacitacion-angular/blob/master/dia2.md#estructura-del-proyecto)
+  - [Root](https://github.com/arias9306/capacitacion-angular/blob/master/dia2.md#root)
+  - [Source Folder](https://github.com/arias9306/capacitacion-angular/blob/master/dia2.md#source-folder)
+  - [App Folder](https://github.com/arias9306/capacitacion-angular/blob/master/dia2.md#app-folder)
+- [Conceptos Importantes](https://github.com/arias9306/capacitacion-angular/blob/master/dia2.md#conceptos-importantes)
+  - [Decoradores](https://github.com/arias9306/capacitacion-angular/blob/master/dia2.md#decoradores)
+    - [Decoradores de Clase](https://github.com/arias9306/capacitacion-angular/blob/master/dia2.md#decoradores-de-clase)
+    - [Decoradores de Propiedad](https://github.com/arias9306/capacitacion-angular/blob/master/dia2.md#decoradores-de-propiedad)
+  - [Modulos](https://github.com/arias9306/capacitacion-angular/blob/master/dia2.md#modulos)
+  - [Componentes](https://github.com/arias9306/capacitacion--angular/blob/master/dia2.md#Componentes)
 
 ## Verificar Instalación
 
@@ -198,7 +197,7 @@ Las propiedades mas importantes del decorador `@NgModule()` son:
 Los componentes son las clases con del decorador `@Component()`,
 los componentes son lo elementos que se muestran en pantalla, pueden ser una pagina completa o un conjunto de elementos que Angular puede elegir y modificar según la logica y los datos de la aplicación.
 
-``` typescript
+```typescript
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -208,26 +207,31 @@ export class AppComponent {
   // lógica
 }
 ```
+
 Las propiedades mas importantes del decorador `@Component()` son:
+
 - `selector`: Esta propiedada funciona como in selector de CSS que le dice a Angular que cree e inserte una instancia de este componente donde encuentre la etiqueta correspondiente en la plantilla HTML.
 - `templateUrl`: En esta propiedad se establece la ruta relativa al template HTML de este componente. Alternativamente, puede proporcionar el template HTML directamente en la propiedad usando la propiedad `template` y usando las comillas back ticks con el HTML.
 
   Ejemplo:
+
   ```typescript
   @Component({
-  selector: 'app-root',
-  template: `
-          <h1>Capacitación Angular</h1>
-          <h2>Template en linea<h2>
-  `,
-  styleUrls: ['./app.component.css']
+    selector: 'app-root',
+    template: `
+      <h1>Capacitación Angular</h1>
+      <h2>
+        Template en linea
+      </h2>
+    `,
+    styleUrls: ['./app.component.css']
   })
   export class AppComponent {
     // lógica
   }
   ```
-- `styleUrls`: En este array definimos las rutas relativas de las hojas de estilos que se van a usar en el componente. Al igual que con el templateUrl se puede definir en el mismo archivo usando la propiedad `style`.
 
+- `styleUrls`: En este array definimos las rutas relativas de las hojas de estilos que se van a usar en el componente. Al igual que con el templateUrl se puede definir en el mismo archivo usando la propiedad `style`.
 
 ## Crear un Componente
 
@@ -242,9 +246,9 @@ Pero realmente lo mas recomendable es usar el `Angular CLI`, con el siguiente co
 ```
 ng generate component <nombre-del-componente>
 ```
+
 o podemos usar la versión corta
+
 ```
 ng g c <nombre-del-componente>
 ```
-
-# Proyecto
