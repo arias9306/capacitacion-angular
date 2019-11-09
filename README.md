@@ -3,100 +3,108 @@
 ## Setup
 
 ### Prerrequisitos
-* [NodeJs](https://nodejs.org/)
-* [Angular CLI](https://cli.angular.io/)
-  
+
+- [NodeJs](https://nodejs.org/)
+- [Angular CLI](https://cli.angular.io/)
+
   Para instalar le Angular Cli ejecutar el siguiente comando en la consola.
+
   ```
    npm install -g @angular/cli
   ```
-* [Visual Studio Code](https://code.visualstudio.com/) 
+
+- [Visual Studio Code](https://code.visualstudio.com/)
+
   > **Recomendación:** Instalar la extensión _Angular Essentials_ ya que contiene otras extensiones muy utiles para el desarrollo de aplicaciones Angular en Visual Studio Code.
 
   > **NOTA:** La extensión de _Angular Essentials_ instala una extensión que se ejecuta en el puerto 8888
 
 ## [Día 1: Introducción](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md)
 
-* [Javascript Moderno](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#javascript-moderno)
-
-  * [Funciones Flecha](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#funciones-flecha)
-  * [Let & Const](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#let--const)
-  * [Destructuración](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#destructuraci%C3%B3n)
-  * [Parametro con valor por defecto](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#parametro-con-valor-por-defecto)
-  * [Parametros Rest](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#parametros-rest)
-  * [Operador de propagación (Spread)](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#operador-de-propagaci%C3%B3n-spread)
-  * [For..of](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#for-of)
-  * Más información [aquí](https://github.com/lukehoban/es6features#readme)
-
-* [Typescript](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#typescript)
-
-  * [Tipos de Datos](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#tipos-de-datos)
-    * [Boolean](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#boolean)
-    * [String](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#string)
-    * [Number](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#number)
-    * [Array](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#array)
-    * [Tuple](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#tuple)
-    * [Enum](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#enum)
-    * [Any](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#any)
-    * [Void](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#void)
-    * [Null o Undefined](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#null-o-undefined)
-    * Mas información [aquí](https://www.typescriptlang.org/docs/handbook/basic-types.html)
-  * [Clases](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#clases)
-  * [Interfaces](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#interfaces)
-  * [Union Type](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#union-type)
-  * [Intersection Type](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#intersection-type)
-  * [Optional](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#optional)
+- [Javascript Moderno](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#javascript-moderno)
+  - [Funciones Flecha](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#funciones-flecha)
+  - [Let & Const](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#let--const)
+  - [Destructuración](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#destructuraci%C3%B3n)
+  - [Parametro con valor por defecto](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#parametro-con-valor-por-defecto)
+  - [Parametros Rest](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#parametros-rest)
+  - [Operador de propagación (Spread)](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#operador-de-propagaci%C3%B3n-spread)
+  - [For..of](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#for-of)
+  - Más información [aquí](https://github.com/lukehoban/es6features#readme)
+- [Typescript](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#typescript)
+  - [Tipos de Datos](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#tipos-de-datos)
+    - [Boolean](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#boolean)
+    - [String](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#string)
+    - [Number](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#number)
+    - [Array](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#array)
+    - [Tuple](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#tuple)
+    - [Enum](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#enum)
+    - [Any](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#any)
+    - [Void](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#void)
+    - [Null o Undefined](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#null-o-undefined)
+    - Mas información [aquí](https://www.typescriptlang.org/docs/handbook/basic-types.html)
+  - [Clases](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#clases)
+  - [Interfaces](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#interfaces)
+  - [Union Type](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#union-type)
+  - [Intersection Type](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#intersection-type)
+  - [Optional](https://github.com/arias9306/capacitacion-angular/blob/master/dia1.md#optional)
 
 ## [Día 2: Básico](https://github.com/arias9306/capacitacion-angular/blob/master/dia2.md#d%C3%ADa-2)
 
-* [Verificar la Instalación](https://github.com/arias9306/capacitacion-angular/blob/master/dia2.md#verificar-instalaci%C3%B3n)
-* [Que es Angular](https://github.com/arias9306/capacitacion-angular/blob/master/dia2.md#que-es-angular)
-* [Crear un proyecto](https://github.com/arias9306/capacitacion-angular/blob/master/dia2.md#crear-un-proyecto)
-* [Estructura del Proyecto](https://github.com/arias9306/capacitacion-angular/blob/master/dia2.md#estructura-del-proyecto)
-  * [Root](https://github.com/arias9306/capacitacion-angular/blob/master/dia2.md#root)
-  * [Source Folder](https://github.com/arias9306/capacitacion-angular/blob/master/dia2.md#source-folder)
-  * [App Folder](https://github.com/arias9306/capacitacion-angular/blob/master/dia2.md#app-folder)
-* [Conceptos Importantes](https://github.com/arias9306/capacitacion-angular/blob/master/dia2.md#conceptos-importantes)
-  * [Decoradores](https://github.com/arias9306/capacitacion-angular/blob/master/dia2.md#decoradores)
-    * [Decoradores de Clase](https://github.com/arias9306/capacitacion-angular/blob/master/dia2.md#decoradores-de-clase)
-    * [Decoradores de Propiedad](https://github.com/arias9306/capacitacion-angular/blob/master/dia2.md#decoradores-de-propiedad)
-  * [Modulos](https://github.com/arias9306/capacitacion-angular/blob/master/dia2.md#modulos)
-  * [Componentes](https://github.com/arias9306/capacitacion-angular/blob/master/dia2.md#Componentes)
-* [Interpolación](https://github.com/arias9306/capacitacion-angular/blob/master/dia2.md#interpolaci%C3%B3n)
-+ [Proyecto](https://github.com/arias9306/capacitacion-angular/blob/master/dia2.md#proyecto)
+- [Verificar la Instalación](https://github.com/arias9306/capacitacion-angular/blob/master/dia2.md#verificar-instalaci%C3%B3n)
+- [Que es Angular](https://github.com/arias9306/capacitacion-angular/blob/master/dia2.md#que-es-angular)
+- [Crear un proyecto](https://github.com/arias9306/capacitacion-angular/blob/master/dia2.md#crear-un-proyecto)
+- [Estructura del Proyecto](https://github.com/arias9306/capacitacion-angular/blob/master/dia2.md#estructura-del-proyecto)
+  - [Root](https://github.com/arias9306/capacitacion-angular/blob/master/dia2.md#root)
+  - [Source Folder](https://github.com/arias9306/capacitacion-angular/blob/master/dia2.md#source-folder)
+  - [App Folder](https://github.com/arias9306/capacitacion-angular/blob/master/dia2.md#app-folder)
+- [Conceptos Importantes](https://github.com/arias9306/capacitacion-angular/blob/master/dia2.md#conceptos-importantes)
+  - [Decoradores](https://github.com/arias9306/capacitacion-angular/blob/master/dia2.md#decoradores)
+    - [Decoradores de Clase](https://github.com/arias9306/capacitacion-angular/blob/master/dia2.md#decoradores-de-clase)
+    - [Decoradores de Propiedad](https://github.com/arias9306/capacitacion-angular/blob/master/dia2.md#decoradores-de-propiedad)
+  - [Módulos](https://github.com/arias9306/capacitacion-angular/blob/master/dia2.md#modulos)
+  - [Componentes](https://github.com/arias9306/capacitacion-angular/blob/master/dia2.md#Componentes)
 
+## [Día 3 Databinding](https://github.com/arias9306/capacitacion-angular/blob/master/dia3.md)
 
-## Día 3
-  
-* Databinding
-* Eventbinding
-* Directivas
-* Debugging
-* Componentes
-+ Proyecto
-
+- [Databinding](https://github.com/arias9306/capacitacion-angular/blob/master/dia3.md#Databinding)
+  - [Interpolación](https://github.com/arias9306/capacitacion-angular/blob/master/dia3.md#Interpolación)
+  - [Property Binding](https://github.com/arias9306/capacitacion-angular/blob/master/dia3.md#property-binding)
+  - [Event Binding](https://github.com/arias9306/capacitacion-angular/blob/master/dia3.md#event-binding)
+  - [Attribute Binding](https://github.com/arias9306/capacitacion-angular/blob/master/dia3.md#attribute-binding)
+  - [Class Binding](https://github.com/arias9306/capacitacion-angular/blob/master/dia3.md#class-binding)
+  - [Style Binding](https://github.com/arias9306/capacitacion-angular/blob/master/dia3.md#style-binding)
+  - [Two-way Data Binding](https://github.com/arias9306/capacitacion-angular/blob/master/dia3.md#two-way-databinding)
+- [Debugging](https://github.com/arias9306/capacitacion-angular/blob/master/dia3.md#debugging)
+- [Componentes & Databinding](https://github.com/arias9306/capacitacion-angular/blob/master/dia3.md#componentes-&-databinding)
+- [Directivas](https://github.com/arias9306/capacitacion-angular/blob/master/dia3.md#directivas)
+  - [ngIf](https://github.com/arias9306/capacitacion-angular/blob/master/dia3.md#ngif)
+  - [ngFor](https://github.com/arias9306/capacitacion-angular/blob/master/dia3.md#ngfor)
+  - [ngStyle](https://github.com/arias9306/capacitacion-angular/blob/master/dia3.md#ngstyle)
+- [Crear Directivas](https://github.com/arias9306/capacitacion-angular/blob/master/dia3.md#crear-directivas)
 
 ## Día 4
 
-* Servicios
-* Routing
-* Forms
-  * Template Driven
-  * Reactive Forms
-* Pipes
-+ Proyecto
+- Servicios
+- Routing
+- Forms
+  - Template Driven
+  - Reactive Forms
+- Pipes
 
+* Proyecto
 
 ## Día 5
 
-* Http Request
-* Authentication (Guards)
-* Deploy
-+ Proyecto
+- Http Request
+- Authentication (Guards)
+- Deploy
 
-## Día 6 
+* Proyecto
 
-* Animaciones
-* Testing
-* Buenas Practicas
-+ Proyecto
+## Día 6
+
+- Animaciones
+- Testing
+- Buenas Practicas
+
+* Proyecto

@@ -13,8 +13,7 @@
     * [Decoradores de Propiedad](https://github.com/arias9306/capacitacion-angular/blob/master/dia2.md#decoradores-de-propiedad)
   * [Modulos](https://github.com/arias9306/capacitacion-angular/blob/master/dia2.md#modulos)
   * [Componentes](https://github.com/arias9306/capacitacion--angular/blob/master/dia2.md#Componentes)
-* [Interpolación](https://github.com/arias9306/capacitacion-angular/blob/master/dia2.md#interpolaci%C3%B3n)
-+ [Proyecto](https://github.com/arias9306/capacitacion-angular/blob/master/dia2.md#proyecto)
+
 
 ## Verificar Instalación
 
