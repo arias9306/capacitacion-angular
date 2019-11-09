@@ -18,6 +18,12 @@
 
 ## Databinding
 
+Databinding es el proceso que nos permite comunicar muestros templates HTML con el archivo de Typescript para mostrar los valores y respoder a acciones del usuario como por ejemplo clicks.
+
+<p align="center">
+    <img src="https://raw.githubusercontent.com/arias9306/capacitacion-angular/master/img/databinding.jpg" alt="Databinding" />
+</p>
+
 ### Interpolación
 
 ### Property Binding
