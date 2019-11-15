@@ -201,9 +201,9 @@ Una directiva es una clase con el decorador `@Directive()` que puede modificar l
 
 Hay 3 tipos de directivas:
 
-* **Componentes**: En realidad el decorador `@Component()` es hereda de `@Directive()` que tiene asociado un template HTML.
-* **Directivas de Atributo**: Son las que modifican el comportamiento y la apariencia de los elementos.
-* **Directivas Estructurales**: Son las que modifican la estructura del DOM.
+- **Componentes**: En realidad el decorador `@Component()` es hereda de `@Directive()` que tiene asociado un template HTML.
+- **Directivas de Atributo**: Son las que modifican el comportamiento y la apariencia de los elementos.
+- **Directivas Estructurales**: Son las que modifican la estructura del DOM.
 
 Angular provee una serie de directivas, pero nosotros también podemos crear nuestras propias directivas.
 
@@ -211,10 +211,17 @@ Angular provee una serie de directivas, pero nosotros también podemos crear nue
 
 La directiva `*ngIf` es una directiva del tipo estructural y se usa para agregar o remover elemento del DOM.
 
-> El asterisco (*) es muy importante para el funcionamiento de la directiva.
+> El asterisco (\*) es muy importante para el funcionamiento de la directiva.
 
-``` html
+```html
 <app-item-detail *ngIf="isActive" [item]="item"></app-item-detail>
+```
+
+#### ngIf Else
+
+```html
+<div *ngIf="condition; else elseBlock">Content to render when condition is true.</div>
+<ng-template #elseBlock>Content to render when condition is false.</ng-template>
 ```
 
 #### ngIf vs hidden
@@ -223,7 +230,43 @@ Ocultar un elemento con el atributo hidden es diferente de eliminarlo con NgIf y
 
 ### ngFor
 
+La directiva `*ngFor` es un repetidor, una forma de presentar una lista de elementos.
+
+Es una directiva de tipo estructural.
+
+```html
+<div *ngFor="let item of items">{{item.name}}</div>
+```
+
 ### ngStyle
+
+La directiva `ngStyle` es una directiva de tipo atributo y es usada para asignar estilos a los elementos HTML.
+
+```html
+<some-element [ngStyle]="{'font-style': styleExp}">...</some-element>
+```
+
+### ngClass
+
+La directiva `ngClass` agrega o remueve clases a los elementos HTML.
+
+Las clases CSS se actualizan de la siguiente manera, según el tipo de evaluación de expresión:
+
+- **String**: se añaden las clases CSS enumeradas en el string.
+- **Matriz**: se añaden las clases CSS declaradas como elementos de matriz.
+- **Object**: un objeto en donde la key del objeto son las clases y la propiedad es un booleano definiendo si debe o no agregar la clase.
+
+```html
+<some-element [ngClass]="'first second'">...</some-element>
+
+<some-element [ngClass]="['first', 'second']">...</some-element>
+
+<some-element [ngClass]="{'first': true, 'second': true, 'third': false}">...</some-element>
+
+<some-element [ngClass]="stringExp|arrayExp|objExp">...</some-element>
+
+<some-element [ngClass]="{'class1 class2 class3' : true}">...</some-element>
+```
 
 ## Debugging
 
