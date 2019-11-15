@@ -270,12 +270,16 @@ Las clases CSS se actualizan de la siguiente manera, según el tipo de evaluaci�
 
 ## Debugging
 
+Para hacer debug directamente en el VS Code tenemos que tener instalada la extensión `Debugger for Chrome` y seguir los pasos que se encuentran en las siguientes imagenes.
+
+
 <p align="center">
-    <img src="https://raw.githubusercontent.com/arias9306/capacitacion-angular/master/img/debug_1.jpg" alt="Databinding" />
+    <img src="https://raw.githubusercontent.com/arias9306/capacitacion-angular/master/img/debug_1.jpg" alt="debug 1" />
 </p>
 
 <p align="center">
-    <img src="https://raw.githubusercontent.com/arias9306/capacitacion-angular/master/img/debug_2.jpg" alt="Databinding" />
+    <img src="https://raw.githubusercontent.com/arias9306/capacitacion-angular/master/img/debug_2.jpg" alt="debug 2" />
 </p>
 
-## Componentes & Databinding
+Al final presionar ``F5``
+
