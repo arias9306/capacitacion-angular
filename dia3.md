@@ -30,36 +30,170 @@ La interpolación se refiere a incrustar expresiones en texto. Por defecto, la i
 
 Por ejemplo
 
-``` html
-<h3> Autor: {{ authorName }} </h3>
+```html
+<h3>Autor: {{ authorName }}</h3>
 ```
+
 El texto que se encuetra entre las llaves `{{...}}` corresponde a una variable en archivo `.ts`, pero no en todos los casos tienen que ser variables como ya lo mensioné antes lo que se encuentra dentro de las llaves corresponde a un expresión como por ejemplo.
 
-``` html
-<h3> El resultado de la suma de 1 + 1 es : {{ 1 + 1 }} </h3>
+```html
+<h3>El resultado de la suma de 1 + 1 es : {{ 1 + 1 }}</h3>
 ```
 
-``` html
-<h3> Autor : {{ 'Dante Alighieri' }} </h3>
+```html
+<h3>Autor : {{ 'Dante Alighieri' }}</h3>
 ```
+
 También podemos invocar metodos que se encuentren en el archivo `.ts` como se ve en el siguiente ejemplo.
 
-``` html
-<h3> El valor del contador es : {{ getCounterValue() }} </h3>
+```html
+<h3>El valor del contador es : {{ getCounterValue() }}</h3>
 ```
+
 Como dato adicional si nos gustan las llaves `{{...}}` se pueden cambiar en la configuración de los metadatos del compontente usando la propiedad `interpolation`
 
 ### Property Binding
 
+El Property binding solo se comunica en una sola dirección, desde el componente al template HTML y se usa agregando corchetes cuadrados `[propiedad]` a la propiedad que queremos relacionar.
+
+```html
+<button [disabled]="isDisabled">Disabled Button</button>
+```
+
+en el caso de las propiedades HTML también podemos usar el prefijo `bind`.
+
+```html
+<button bind-disabled="isDisabled">Disabled Button</button>
+```
+
 ### Event Binding
+
+El Event binding nos permite escuchar ciertos eventos generados por el usuario en el template como por ejemplo clicks, movimientos con el mouse, pulsaciones en el teclado.
+
+Para hacer uso del event binding lo que tenemos que hacer es rodear en paréntesis el evento que queremos escuchar seguido de la acción que vamos a realizar cuando ese evento ocurra.
+
+```html
+<button (click)="onSave()">Save</button>
+```
+
+En el caso del event binding también tenemos una alternativa usando un prefijo `on-event-name`.
+
+```html
+<button on-click="onSave()">Save</button>
+```
+
+De la siguiente manera podemos capturar la información emitida por evento.
+
+```html
+<input (input)="onUpdateName($event)" />
+```
+
+```typescript
+onUpdateName(event: Event){
+  console.log((<HTMLInputElement>event.target).value);
+}
+```
 
 ### Attribute Binding
 
+El Attribute binding es similar al [Property Binding](https://github.com/arias9306/capacitacion-angular/blob/master/dia3.md#property-binding) solo que en este caso se usa para asignar el valor directamente a una atributo del elemento HTML.
+
+```html
+<img [attr.title]="title" src="..." />
+```
+
 ### Class Binding
+
+El Class binding se usa para agregar y eliminar clases CSS de un elemento. La sintaxis del class binding es `[class.nombre-de-la-clase]="exp"`
+
+Ejemplos:
+
+```css
+.special {
+  background-color: #1976d2;
+  color: #ffffff;
+}
+
+.item {
+  font-weight: bold;
+}
+.clearance {
+  border: 2px solid #d41e2e;
+}
+.item-clearance {
+  font-style: italic;
+}
+
+.new-class {
+  background-color: #ed1b2f;
+  font-style: italic;
+  color: #fff;
+}
+```
+
+Asignar una clase CSS a un elemento HTML.
+
+```html
+<div [class.special]="isSpecial">The class binding is special.</div>
+```
+
+Agregar o remover una clase de un elemento HTML.
+
+```html
+<div class="special" [class.special]="!isSpecial">This one is not so special.</div>
+```
+
+También podemos usar el prefijo `bind`
+
+```html
+<div bind-class.special="isSpecial">This class binding is special too.</div>
+```
+
+Agregar una clase nueva.
+
+```html
+<div class="item clearance special" [class.item-clearance]="itemClearance">Add another class</div>
+```
+
+Incluso también podemos reemplazar todas las clases que tenga asignado el elemento HTML con una nueva clase.
+
+```html
+<div class="item clearance special" [attr.class]="resetClasses">Reset all classes at once</div>
+```
 
 ### Style Binding
 
+El Style binding se usa para asignar estilos en línea, la sintaxis del style binding es usando el prefijo `style` seguido de un punto (.) y el nombre de la propiedad css `[style.style-property].`
+
+```html
+<button [style.color]="isSpecial ? 'red': 'green'">Red</button>
+<button [style.background-color]="canSave ? 'cyan': 'grey'">Save</button>
+```
+
+Para el caso de algunas propiedades CSS que tiene unidades como `font-size` también podemos definirlas.
+
+```html
+<button [style.font-size.em]="isSpecial ? 3 : 1">Big</button>
+<button [style.font-size.%]="!isSpecial ? 150 : 50">Small</button>
+```
+
+> El Style binding adecuada para configurar un estilo único, ya que para configurar varios estilos es mas recomendable usar la directiva NgStyle.
+
 ### Two-way Data Binding
+
+El Two-way data binding lo que nos permite como vieron en la imagen inicial es crear una comunicación entre el template y el componente en typescript.
+
+Entonces básicamente lo que hace el two-way data binding es asignar un valor especifico y escuchar si es modificado.
+
+Su sintaxis es `[()]` mundialmente conocida como la banana en la caja.
+
+> Para usar ngModel tenemos que importar el `FormsModule` en el app.module.ts
+
+```html
+<input [(ngModel)]="variable" />
+
+{{variable}}
+```
 
 ## Debugging
 
