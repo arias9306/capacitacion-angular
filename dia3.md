@@ -270,4 +270,12 @@ Las clases CSS se actualizan de la siguiente manera, seg√∫n el tipo de evaluaci√
 
 ## Debugging
 
+<p align="center">
+    <img src="https://raw.githubusercontent.com/arias9306/capacitacion-angular/master/img/debug_1.jpg" alt="Databinding" />
+</p>
+
+<p align="center">
+    <img src="https://raw.githubusercontent.com/arias9306/capacitacion-angular/master/img/debug_2.jpg" alt="Databinding" />
+</p>
+
 ## Componentes & Databinding
