@@ -50,7 +50,7 @@ También podemos invocar metodos que se encuentren en el archivo `.ts` como se v
 <h3>El valor del contador es : {{ getCounterValue() }}</h3>
 ```
 
-Como dato adicional si nos gustan las llaves `{{...}}` se pueden cambiar en la configuración de los metadatos del compontente usando la propiedad `interpolation`
+Como dato adicional si no nos gustan las llaves `{{...}}` se pueden cambiar en la configuración de los metadatos del compontente usando la propiedad `interpolation`
 
 ### Property Binding
 
@@ -195,16 +195,36 @@ Su sintaxis es `[()]` mundialmente conocida como la banana en la caja.
 {{variable}}
 ```
 
-## Debugging
-
-## Componentes & Databinding
-
 ## Directivas
 
+Una directiva es una clase con el decorador `@Directive()` que puede modificar la estructura del DOM o modificar atributos de un elemento.
+
+Hay 3 tipos de directivas:
+
+* **Componentes**: En realidad el decorador `@Component()` es hereda de `@Directive()` que tiene asociado un template HTML.
+* **Directivas de Atributo**: Son las que modifican el comportamiento y la apariencia de los elementos.
+* **Directivas Estructurales**: Son las que modifican la estructura del DOM.
+
+Angular provee una serie de directivas, pero nosotros también podemos crear nuestras propias directivas.
+
 ### ngIf
+
+La directiva `*ngIf` es una directiva del tipo estructural y se usa para agregar o remover elemento del DOM.
+
+> El asterisco (*) es muy importante para el funcionamiento de la directiva.
+
+``` html
+<app-item-detail *ngIf="isActive" [item]="item"></app-item-detail>
+```
+
+#### ngIf vs hidden
+
+Ocultar un elemento con el atributo hidden es diferente de eliminarlo con NgIf ya que cuando se oculta un elemento, ese elemento permanecen en el DOM y ya que todos esos elementos permanecen en el DOM, Angular sigue pendiente de esos elementos en caso de que cambien y pues eso puede causar problemas de rendimiento.
 
 ### ngFor
 
 ### ngStyle
 
-## Crear Directivas
+## Debugging
+
+## Componentes & Databinding

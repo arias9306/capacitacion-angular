@@ -58,7 +58,7 @@ Ahora:
 ``` javascript
 class Persona {
   edad = 0;
-  
+
   constructor() {
     setInterval(() => {
       this.edad++;
@@ -113,7 +113,7 @@ eat(protein: string, fruit: string, ...sweets: string[]) {
 }
 
 eat('chicken', 'mango');
-// Output: Eating: chicken with mango and 
+// Output: Eating: chicken with mango and
 eat('meat', 'lemonade', 'chocolate', 'm&m');
 // Output: Eating: meat with lemonade and chocolate,m&m
 ```
@@ -148,7 +148,7 @@ const obj2 = {
     ...obj1,
     y: 35,
     z: 10
-}; 
+};
 
 // obj2: {foo: "bar", x: 42, y: 35, z: 10}
 ```
@@ -277,20 +277,20 @@ Las clases soportan herencia, super calls, instanciar objetos, métodos estátic
 class Apple extends Fruit {
 
     isBitten: boolean;
-    
+
     constructor(color) {
         super(color);
         this.taste = 'sweet';
         this.hasSeeds = true;
         this.isBitten = false;
     }
-    
+
     eat() {
         this.isBitten = true;
         super.eat();
     }
-    
-    
+
+
 }
 ```
 
@@ -346,12 +346,12 @@ person.name = 'Henry'; // ❌
 
 ### Optional
 ``` typescript
-class Hero = {
+class Hero {
     id: string;
     name: string;
     team?: string;
     powers: string[];
-    
+
     constructor(name: string, team?: string,  powers?: string[]) {
       this.id = name + team;
       this.name = name;
