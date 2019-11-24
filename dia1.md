@@ -364,3 +364,6 @@ const spiderMan = new Hero('Spider Man', 'Avengers', [ 'spider sense', 'super st
 const ironMan = new Hero('Iron Man', 'Avengers');
 const scarletWitch = new Hero('Scarlet Witch');
 ```
+________________
+## Continua [Día 2: Lo Básico](https://github.com/arias9306/capacitacion-angular/blob/master/dia2.md)
+____________________

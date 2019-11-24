@@ -64,7 +64,7 @@
   - [Módulos](https://github.com/arias9306/capacitacion-angular/blob/master/dia2.md#modulos)
   - [Componentes](https://github.com/arias9306/capacitacion-angular/blob/master/dia2.md#Componentes)
 
-## [Día 3 Databinding](https://github.com/arias9306/capacitacion-angular/blob/master/dia3.md)
+## [Día 3: Databinding](https://github.com/arias9306/capacitacion-angular/blob/master/dia3.md)
 
 - [Databinding](https://github.com/arias9306/capacitacion-angular/blob/master/dia3.md#Databinding)
   - [Interpolación](https://github.com/arias9306/capacitacion-angular/blob/master/dia3.md#Interpolación)
@@ -74,26 +74,47 @@
   - [Class Binding](https://github.com/arias9306/capacitacion-angular/blob/master/dia3.md#class-binding)
   - [Style Binding](https://github.com/arias9306/capacitacion-angular/blob/master/dia3.md#style-binding)
   - [Two-way Data Binding](https://github.com/arias9306/capacitacion-angular/blob/master/dia3.md#two-way-databinding)
-- [Debugging](https://github.com/arias9306/capacitacion-angular/blob/master/dia3.md#debugging)
-- [Componentes & Databinding](https://github.com/arias9306/capacitacion-angular/blob/master/dia3.md#componentes-&-databinding)
 - [Directivas](https://github.com/arias9306/capacitacion-angular/blob/master/dia3.md#directivas)
   - [ngIf](https://github.com/arias9306/capacitacion-angular/blob/master/dia3.md#ngif)
   - [ngFor](https://github.com/arias9306/capacitacion-angular/blob/master/dia3.md#ngfor)
   - [ngStyle](https://github.com/arias9306/capacitacion-angular/blob/master/dia3.md#ngstyle)
-- [Crear Directivas](https://github.com/arias9306/capacitacion-angular/blob/master/dia3.md#crear-directivas)
+- [Debugging](https://github.com/arias9306/capacitacion-angular/blob/master/dia3.md#debugging)
 
-## Día 4
 
+## [Día 4: Proyecto de Práctica](https://github.com/arias9306/capacitacion-angular/blob/master/dia4.md)
+
+- Angular Material
+- Angular Flex Layout
+- Código guía
+- Paso a Paso
+  - Crear el proyecto
+  - Agregar Angular Material
+  - Agregar Flex Layout
+  - Crear los componentes
+  - Importar los módulos de Angular Material
+  - Crear los modelos
+  - NavbarComponent
+  - AppComponent
+  - BooksComponent
+  - BookListComponent
+  - BookDetailComponent
+
+
+## Día 5
+
+- Componentes y Databinding
+- Crear Directivas
 - Servicios
 - Routing
+- Pipes
+
+## Día 6
+
 - Forms
   - Template Driven
   - Reactive Forms
-- Pipes
 
-* Proyecto
-
-## Día 5
+## Día 7
 
 - Http Request
 - Authentication (Guards)
@@ -101,7 +122,7 @@
 
 * Proyecto
 
-## Día 6
+## Día 7
 
 - Animaciones
 - Testing

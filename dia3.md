@@ -8,13 +8,12 @@
   - [Class Binding](https://github.com/arias9306/capacitacion-angular/blob/master/dia3.md#class-binding)
   - [Style Binding](https://github.com/arias9306/capacitacion-angular/blob/master/dia3.md#style-binding)
   - [Two-way Data Binding](https://github.com/arias9306/capacitacion-angular/blob/master/dia3.md#two-way-databinding)
-- [Debugging](https://github.com/arias9306/capacitacion-angular/blob/master/dia3.md#debugging)
-- [Componentes & Databinding](https://github.com/arias9306/capacitacion-angular/blob/master/dia3.md#componentes-&-databinding)
 - [Directivas](https://github.com/arias9306/capacitacion-angular/blob/master/dia3.md#directivas)
   - [ngIf](https://github.com/arias9306/capacitacion-angular/blob/master/dia3.md#ngif)
   - [ngFor](https://github.com/arias9306/capacitacion-angular/blob/master/dia3.md#ngfor)
   - [ngStyle](https://github.com/arias9306/capacitacion-angular/blob/master/dia3.md#ngstyle)
-- [Crear Directivas](https://github.com/arias9306/capacitacion-angular/blob/master/dia3.md#crear-directivas)
+- [Debugging](https://github.com/arias9306/capacitacion-angular/blob/master/dia3.md#debugging)
+
 
 ## Databinding
 
@@ -282,4 +281,6 @@ Para hacer debug directamente en el VS Code tenemos que tener instalada la exten
 </p>
 
 Al final presionar ``F5``
-
+_________________
+## Continua [Día 4: Proyecto de Práctica](https://github.com/arias9306/capacitacion-angular/blob/master/dia3.md)
+______________

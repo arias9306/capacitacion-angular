@@ -252,3 +252,6 @@ o podemos usar la versión corta
 ```
 ng g c <nombre-del-componente>
 ```
+_____________
+## Continua [Día 3: Databinding](https://github.com/arias9306/capacitacion-angular/blob/master/dia3.md)
+______________
