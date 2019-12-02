@@ -129,6 +129,6 @@
 
 - ~~Animaciones~~
 - ~~Testing~~
-- ~~Buenas Practicas
+- ~~Buenas Practicas~~
 
 * Proyecto
