@@ -99,22 +99,25 @@
   - BookListComponent
   - BookDetailComponent
 
+## Día 5 Reto
 
-## Día 5
+- Todo App
 
-- Componentes y Databinding
-- Crear Directivas
+## Día 6 Servicios y Routing
+
+- ~~Componentes y Databinding~~
+- ~~Crear Directivas~~
 - Servicios
 - Routing
 - Pipes
 
-## Día 6
+## Día 7 Forms (Template Driven / Reactive)
 
 - Forms
   - Template Driven
   - Reactive Forms
 
-## Día 7
+## Día 8 Peticiones Http y Deploy
 
 - Http Request
 - Authentication (Guards)
@@ -122,10 +125,10 @@
 
 * Proyecto
 
-## Día 7
+## ~~Día 9~~
 
-- Animaciones
-- Testing
-- Buenas Practicas
+- ~~Animaciones~~
+- ~~Testing~~
+- ~~Buenas Practicas
 
 * Proyecto
