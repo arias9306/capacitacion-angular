@@ -100,23 +100,23 @@
   - [AppComponent](https://github.com/arias9306/capacitacion-angular/blob/master/dia4.md#appcomponent)
   - [Ejecutar](https://github.com/arias9306/capacitacion-angular/blob/master/dia4.md#ejecutar)
 
-## [Día 5 Reto](https://github.com/arias9306/capacitacion-angular/blob/master/dia5.md)
+## [Día 5: Reto](https://github.com/arias9306/capacitacion-angular/blob/master/dia5.md)
 
 - Todo App
 
-## [Día 6 Servicios y Routing](https://github.com/arias9306/capacitacion-angular/blob/master/dia6.md)
+## [Día 6: Servicios y Routing](https://github.com/arias9306/capacitacion-angular/blob/master/dia6.md)
 
 - [Servicios](https://github.com/arias9306/capacitacion-angular/blob/master/dia6.md#servicios)
 - [Routing](https://github.com/arias9306/capacitacion-angular/blob/master/dia6.md#routing)
 - [Pipes](https://github.com/arias9306/capacitacion-angular/blob/master/dia6.md#pipes)
 
-## Día 7 Forms (Template Driven / Reactive)
+## Día 7: Forms (Template Driven / Reactive)
 
 - Forms
   - Template Driven
   - Reactive Forms
 
-## Día 8 Peticiones Http y Deploy
+## Día 8: Peticiones Http y Deploy
 
 - Http Request
 - Authentication (Guards)
