@@ -206,13 +206,160 @@ import { FlexLayoutModule } from '@angular/flex-layout';
   }
   ```
 
-  Los Decoradores ``@Input()`` y ``@Output()`` permiten a Angular compartir datos entre componentes, el decorador ``@Input()`` es para el componente reciba información desde un componente padre, en este caso el componente `BookListComponent` recibe un objeto `Autor`, y el decorador `@Output()` es para que el componente hijo le envié información a un componente padre, en el caso del componente `BookListComponent` se usa para notificarle al compoente padre cual fue el libro seleccionado para eso se el `EventEmitter`, el cual es ejecutado por evento click en el HTML y luego enviado al componente con la siguiente sentencia `this.bookSelected.emit(book)`
+  Los Decoradores ``@Input()`` y ``@Output()`` permiten a Angular compartir datos entre componentes.
 
+  El decorador ``@Input()`` es para el componente reciba información desde un componente padre, en este caso el componente `BookListComponent` recibe un objeto `Autor`.
+
+  El decorador `@Output()` es para que el componente hijo le envié información a un componente padre, en el caso del componente `BookListComponent` se usa para notificarle al compoente padre cual fue el libro seleccionado para eso se el `EventEmitter`, el cual es ejecutado por evento click en el HTML y luego enviado al componente con la siguiente sentencia `this.bookSelected.emit(book)`.
 
   ## BookDetailComponent
+
+  En el HTML de `BookDetailCompontent` vamos a agregar una `mat-card` en la cual vamos a mostrar los detalles del libro seleccionado en el componente de `BookListComponent`.
+
+ ``` html
+  <mat-card-header>
+    <img mat-card-avatar [src]="book.img">
+    <mat-card-title>
+      <span [matBadge]="book.quantity"
+      matBadgeOverlap="false"
+      [matBadgeColor]="book.quantity < 3 ? 'warn' : 'primary' " >{{book.name}}</span>
+    </mat-card-title>
+    <mat-card-subtitle>{{book.date | date}}</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <p><b>Sinopsis</b>: {{book.sinopsis}}</p>
+  </mat-card-content>
+  <mat-card-actions align="end">
+    <button mat-raised-button color="accent">Comprar</button>
+  </mat-card-actions>
+ ```
+
+ Y en el `book-detail.component.ts` agregamos el siguiente código.
+
+ ``` typescript
+@Component({
+  selector: 'bs-book-detail',
+  templateUrl: './book-detail.component.html',
+  styleUrls: ['./book-detail.component.css']
+})
+export class BookDetailComponent implements OnInit {
+  @Input() book: Book;
+  constructor() { }
+
+  ngOnInit() {
+  }
+}
+ ```
+  Acá simplemente definimos que nuestro componente `BookDetailComponent` va a recibir un `Book`.
+
   ## BooksComponent
+
+  En el componente `BooksComponent` es el encargado de contener los otros componentes `BookListComponent` y `BookDetailComponent`, entonces en nuestro HTML vamos a agregar el siguiente código.
+
+  ``` html
+  <div fxLayout="row" fxLayoutAlign="space-between" fxLayout.xs="column">
+  <mat-card fxFlex="30">
+    <mat-card-title>Books</mat-card-title>
+    <mat-card-content>
+      <bs-book-list *ngFor="let author of authors"
+      [author]="author"
+      (bookSelected)="onSelectBook($event)"></bs-book-list>
+    </mat-card-content>
+  </mat-card>
+  <mat-card fxFlex *ngIf="selectedBook">
+    <mat-card-title>Detalis</mat-card-title>
+    <bs-book-detail [book]="selectedBook"></bs-book-detail>
+  </mat-card>
+</div>
+
+  ```
+y en el typescript agregamos los siguiente.
+
+```` typescript
+@Component({
+  selector: 'bs-books',
+  templateUrl: './books.component.html',
+  styleUrls: ['./books.component.css']
+})
+export class BooksComponent implements OnInit {
+  authors: Author[];
+  selectedBook: Book;
+
+  constructor() {
+    this.authors = [
+      {
+        name: 'Andrés Arias',
+        books: [
+          {
+            name: 'Capacitación Angular Vol.1',
+            date: new Date(),
+            sinopsis: 'Lorem ipsum ...',
+            quantity: 2,
+            img: 'https://cdn.freebiesupply.com/logos/large/2x/angular-icon-logo-png-transparent.png'
+          },
+          {
+            name: 'Capacitación Angular Vol.2',
+            date: new Date(),
+            sinopsis: 'In hac habitasse platea.....',
+            quantity: 6,
+            img: 'https://cdn.freebiesupply.com/logos/large/2x/angular-icon-logo-png-transparent.png'
+          }
+        ]
+      },
+      {
+        name: 'Evan Y.',
+        books: [
+          {
+            name: 'Capacitación Vue Vol.1',
+            date: new Date(),
+            sinopsis: 'Vivamus sit amet tellus...',
+            quantity: 5,
+            img: 'https://www.stickpng.com/assets/images/58482acecef1014c0b5e4a1e.png'
+          },
+            {
+            name: 'Capacitación Vue Vol.2',
+            date: new Date(),
+            sinopsis: 'Phasellus tincidunt ante....',
+            quantity: 0,
+            img: 'https://www.stickpng.com/assets/images/58482acecef1014c0b5e4a1e.png'
+          }
+        ]
+      }
+    ];
+  }
+
+  ngOnInit() {}
+
+  onSelectBook(book: Book) {
+    this.selectedBook = book;
+  }
+}
+
+````
+
   ## AppComponent
 
+  En nuestro `app.component.html` lo unico que hacemos es agregar nuestro `bs-navbar` y `bs-books`
+
+  ``` html
+  <bs-navbar></bs-navbar>
+  <bs-books></bs-books>
+  ```
+
+  ## Ejecutar
+
+  Para ejecutar la aplicación ejecutamos el siguiente comando en la consola.
+
+  ```
+  ng serve -o
+  ```
+
+  y nos deberia de mostrar algo como.
+
+<p align="center">
+    <img src="https://raw.githubusercontent.com/arias9306/capacitacion-angular/master/img/book_store.jpg" alt="book store" />
+</p>
+
 ________
-## Continua Día 5
+## Continua [Día 5: Reto](https://github.com/arias9306/capacitacion-angular/blob/master/dia5.md)
 ________
