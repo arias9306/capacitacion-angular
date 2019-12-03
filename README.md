@@ -83,21 +83,22 @@
 
 ## [Día 4: Proyecto de Práctica](https://github.com/arias9306/capacitacion-angular/blob/master/dia4.md)
 
-- Angular Material
-- Angular Flex Layout
-- Código guía
-- Paso a Paso
-  - Crear el proyecto
-  - Agregar Angular Material
-  - Agregar Flex Layout
-  - Crear los componentes
-  - Importar los módulos de Angular Material
-  - Crear los modelos
-  - NavbarComponent
-  - AppComponent
-  - BooksComponent
-  - BookListComponent
-  - BookDetailComponent
+- [Angular Material](https://github.com/arias9306/capacitacion-angular/blob/master/dia4.md#angular-material)
+- [Angular Flex Layout](https://github.com/arias9306/capacitacion-angular/blob/master/dia4.md#angular-flex-layout)
+- [Código guía](https://github.com/arias9306/capacitacion-angular/blob/master/dia4.md#c%C3%B3digo-gu%C3%ADa)
+- [Paso a Paso](https://github.com/arias9306/capacitacion-angular/blob/master/dia4.md#paso-a-paso)
+  - [Crear el proyecto](https://github.com/arias9306/capacitacion-angular/blob/master/dia4.md#crear-el-proyecto)
+  - [Agregar Angular Material](https://github.com/arias9306/capacitacion-angular/blob/master/dia4.md#agregar-angular-material)
+  - [Agregar Flex Layout](https://github.com/arias9306/capacitacion-angular/blob/master/dia4.md#agregar-flex-layout)
+  - [Crear los componentes](https://github.com/arias9306/capacitacion-angular/blob/master/dia4.md#crear-los-componentes)
+  - [Importar los módulos de Angular Material](https://github.com/arias9306/capacitacion-angular/blob/master/dia4.md#importar-los-m%C3%B3dulos-de-angular-material)
+  - [Crear los modelos](https://github.com/arias9306/capacitacion-angular/blob/master/dia4.md#crear-los-modelos)
+  - [NavbarComponent](https://github.com/arias9306/capacitacion-angular/blob/master/dia4.md#navbarcomponent)
+  - [BookListComponent](https://github.com/arias9306/capacitacion-angular/blob/master/dia4.md#booklistcomponent)
+  - [BookDetailComponent](https://github.com/arias9306/capacitacion-angular/blob/master/dia4.md#bookdetailcomponent)
+  - [BooksComponent](https://github.com/arias9306/capacitacion-angular/blob/master/dia4.md#bookscomponent)
+  - [AppComponent](https://github.com/arias9306/capacitacion-angular/blob/master/dia4.md#appcomponent)
+  - [Ejecutar](https://github.com/arias9306/capacitacion-angular/blob/master/dia4.md#ejecutar)
 
 ## Día 5 Reto
 
