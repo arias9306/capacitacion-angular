@@ -9,8 +9,8 @@ ng add @angular/material
 Una vez ejecutamos ese comando en la consola, el CLI nos va a preguntar cosas como:
 
 - Seleccionar el tema que queremos usar
-  - **Indigo/Pink** ✅
-  - Deep Purple/Amber
+  - Indigo/Pink
+  - **Deep Purple/Amber** ✅
   - Pink/Blue Gray
   - Purple/Green
   - Custom
@@ -61,7 +61,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
   D:\development\book-store>ng add @angular/material
   Installing packages for tooling via npm.
   Installed packages for tooling via npm.
-  ? Choose a prebuilt theme name, or "custom" for a custom theme: Indigo/Pink
+  ? Choose a prebuilt theme name, or "custom" for a custom theme: Deep Purple/Amber
   ? Set up HammerJS for gesture recognition? Yes
   ? Set up browser animations for Angular Material? Yes
   ```
@@ -124,7 +124,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     img: string;
   }
   ```
-  La clase `Àuthor` contiene las siguiente propiedades.
+  La clase `Author` contiene las siguiente propiedades.
 
   ``` typescript
   import { Book } from './book.model';
@@ -135,10 +135,83 @@ import { FlexLayoutModule } from '@angular/flex-layout';
   }
   ```
   ## NavbarComponent
-  ## AppComponent
-  ## BooksComponent
+
+  En el HTML de nuestro `NavbarComponent` agregamos un `mat-toolbar` de la siguiente manera.
+
+  ``` html
+  <mat-toolbar color="primary">
+    <mat-icon>book</mat-icon> My Book Store
+  </mat-toolbar>
+  ```
+
+  usando la directiva `color` le asignamos el color principal del tema selccionado, en este caso morado.
+
+  Dentro de nuestro `mat-toolbar` agregamos un `mat-icon` para mostrar un icono antes del texto *My Book Store*
+
+  El listado completo de iconos lo podemos encontrar [aquí](https://material.io/resources/icons/)
+
   ## BookListComponent
+
+  En este componente vamos a usar el `mat-nav-list` para mostar el listado de autores y sus respectivos libros.
+
+  Entonces en el `book-list.component.html` vamos a agregar el siguiente código.
+
+  ``` html
+  <mat-nav-list>
+    <h3 mat-subheader>{{author.name}}</h3>
+    <mat-list-item
+      *ngFor="let book of author.books"
+      (click)="onBookSelected(book)"
+      [title]="book.sinopsis.substring(0, 50) + '...'">
+      <mat-icon mat-list-icon>library_books</mat-icon>
+      <h4 mat-line>{{book.name}}</h4>
+      <p mat-line> {{book.date | date}} </p>
+    </mat-list-item>
+    <mat-divider></mat-divider>
+  </mat-nav-list>
+  ```
+
+  Lo que hacemos acá es que con la directiva `*ngFor` vamos a iterar el listado de libros de cada autor.
+
+  Tambien agregamos un evento `click` para que cuando seleccionemos un libro podemos mostrar la infomación del libro en el componente de detalles (`BookDetailComponent`).
+
+  Ahora en el `book-list.component.ts` vamos a agregar el siguiente codigo.
+
+  ``` typescript
+  imports ...
+
+  @Component({
+    selector: 'bs-book-list',
+    templateUrl: './book-list.component.html',
+    styleUrls: ['./book-list.component.css']
+  })
+  export class BookListComponent implements OnInit {
+
+    @Output() bookSelected = new EventEmitter<Book>();
+    @Input() author: Author;
+
+    selectedBook:Book;
+
+    constructor() { }
+
+    ngOnInit() {
+    }
+
+    onBookSelected(book: Book) {
+      /* console.log(book); */
+      this.selectedBook = book;
+      this.bookSelected.emit(book);
+    }
+
+  }
+  ```
+
+  Los Decoradores ``@Input()`` y ``@Output()`` permiten a Angular compartir datos entre componentes, el decorador ``@Input()`` es para el componente reciba información desde un componente padre, en este caso el componente `BookListComponent` recibe un objeto `Autor`, y el decorador `@Output()` es para que el componente hijo le envié información a un componente padre, en el caso del componente `BookListComponent` se usa para notificarle al compoente padre cual fue el libro seleccionado para eso se el `EventEmitter`, el cual es ejecutado por evento click en el HTML y luego enviado al componente con la siguiente sentencia `this.bookSelected.emit(book)`
+
+
   ## BookDetailComponent
+  ## BooksComponent
+  ## AppComponent
 
 ________
 ## Continua Día 5
