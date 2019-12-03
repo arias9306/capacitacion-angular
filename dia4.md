@@ -61,19 +61,79 @@ import { FlexLayoutModule } from '@angular/flex-layout';
   D:\development\book-store>ng add @angular/material
   Installing packages for tooling via npm.
   Installed packages for tooling via npm.
-  ? Choose a prebuilt theme name, or "custom" for a custom theme: Indigo/Pink        [ Preview: https://material.angular.i
-  o?theme=indigo-pink ]
+  ? Choose a prebuilt theme name, or "custom" for a custom theme: Indigo/Pink
   ? Set up HammerJS for gesture recognition? Yes
   ? Set up browser animations for Angular Material? Yes
-
   ```
   ## Agregar Flex Layout
 
   Para agregar angular flex layout a nuestro proyecto ejecutamos el siguiente comando `npm install @angular/flex-layout --save` y agregamos el `FlexLayoutModule` al array de imports en el `app.module.ts`.
 
   ## Crear los componentes
+
+  Creamos los componentes que vamos a usar en el proyecto
+
+  Componente | Comando
+  ------------ | -------------
+  NavbarComponent | `ng g c navbar`
+  BooksComponent | `ng g c books`
+  BookListComponent | `ng g c books/book-list`
+  BookDetailComponent | `ng g c books/book-detail`
+
   ## Importar los módulos de Angular Material
+
+  En nuestro `app.module.ts` agregamos los modulos de los componetes de Angular Material que vamos a usar en el proyecto.
+
+  ``` typescript
+  ...
+  import { MatToolbarModule } from '@angular/material/toolbar';
+  import { MatIconModule } from '@angular/material/icon';
+  import { MatCardModule } from '@angular/material/card';
+  import { MatListModule } from '@angular/material/list';
+  import { MatBadgeModule } from '@angular/material/badge';
+  import { MatButtonModule } from '@angular/material/button';
+
+  @NgModule({
+    declarations: [
+      ...
+    ],
+    imports: [
+      ...
+      MatToolbarModule,
+      MatIconModule,
+      MatCardModule,
+      MatListModule,
+      MatBadgeModule,
+      MatButtonModule
+    ],
+    ...
+  })
+  export class AppModule {}
+  ```
   ## Crear los modelos
+
+  Ahora vamos a agregar los modelos que vamos a usar en nuestro proyecto en este caso son dos, `Book` y `Author`, entonces en la carpeta de ``app`` creamos otra carpeta llamada ``model`` y agregamos dos clases.
+
+  La clase ``Book`` contiene las siguientes propiedades.
+  ``` typescript
+  export class Book {
+    name: string;
+    date: Date;
+    sinopsis: string;
+    quantity: number;
+    img: string;
+  }
+  ```
+  La clase `Àuthor` contiene las siguiente propiedades.
+
+  ``` typescript
+  import { Book } from './book.model';
+
+  export class Author {
+    name: string;
+    books: Book[];
+  }
+  ```
   ## NavbarComponent
   ## AppComponent
   ## BooksComponent
