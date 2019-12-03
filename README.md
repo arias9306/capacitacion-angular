@@ -100,17 +100,15 @@
   - [AppComponent](https://github.com/arias9306/capacitacion-angular/blob/master/dia4.md#appcomponent)
   - [Ejecutar](https://github.com/arias9306/capacitacion-angular/blob/master/dia4.md#ejecutar)
 
-## Día 5 Reto
+## [Día 5 Reto](https://github.com/arias9306/capacitacion-angular/blob/master/dia5.md)
 
 - Todo App
 
-## Día 6 Servicios y Routing
+## [Día 6 Servicios y Routing](https://github.com/arias9306/capacitacion-angular/blob/master/dia6.md)
 
-- ~~Componentes y Databinding~~
-- ~~Crear Directivas~~
-- Servicios
-- Routing
-- Pipes
+- [Servicios](https://github.com/arias9306/capacitacion-angular/blob/master/dia6.md#servicios)
+- [Routing](https://github.com/arias9306/capacitacion-angular/blob/master/dia6.md#routing)
+- [Pipes](https://github.com/arias9306/capacitacion-angular/blob/master/dia6.md#pipes)
 
 ## Día 7 Forms (Template Driven / Reactive)
 
