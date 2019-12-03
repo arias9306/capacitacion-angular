@@ -124,10 +124,3 @@
 
 * Proyecto
 
-## ~~Día 9~~
-
-- ~~Animaciones~~
-- ~~Testing~~
-- ~~Buenas Practicas~~
-
-* Proyecto
