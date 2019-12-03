@@ -19,8 +19,28 @@ Una vez ejecutamos ese comando en la consola, el CLI nos va a preguntar cosas co
 
 Más Información [aquí](https://material.angular.io/guide/getting-started)
 
-
 # Angular Flex Layout
+
+Angular Flex Layout proporciona una API de diseño que utiliza Flexbox CSS + mediaQuery.
+
+Para agregar Angular Flex Layout al proyecto ejecutamos el siguiente comando.
+
+```
+npm install @angular/flex-layout --save
+```
+Una vez finalice la instalación debemos agregar el `FlexLayoutModule` a nuestro `app.module.ts` como se muestra a continuación.
+
+``` typescript
+import { FlexLayoutModule } from '@angular/flex-layout';
+...
+
+@NgModule({
+    ...
+    imports: [ FlexLayoutModule ],
+    ...
+});
+```
+
 # Código guía
 
   El código de guía se encuentra [aquí](https://github.com/arias9306/capacitacion-angular/tree/master/dia4/book-store)
