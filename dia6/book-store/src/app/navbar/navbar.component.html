@@ -1,3 +1,10 @@
 <mat-toolbar color="primary">
-  <mat-icon>book</mat-icon> My Book Store
+  <mat-toolbar-row>
+    <mat-icon>book</mat-icon>
+    <a mat-button routerLink="/"><h1>My Book Store</h1></a>
+    <div>
+      <a mat-button routerLink="/authors"> Authors </a>
+      <a mat-button routerLink="/books"> Books </a>
+    </div>
+  </mat-toolbar-row>
 </mat-toolbar>

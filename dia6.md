@@ -2,6 +2,8 @@
 
 ## Servicios
 
+Los servicios en Angular con clases con el decorador `@Injectable()` que encapsula lógica y datos para ser reutlizados en toda la aplicación.
+
 ## Routing
 
 ## Pipes

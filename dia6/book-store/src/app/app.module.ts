@@ -14,6 +14,20 @@ import { MatCardModule } from '@angular/material/card';
 import { MatListModule } from '@angular/material/list';
 import { MatBadgeModule } from '@angular/material/badge';
 import { MatButtonModule } from '@angular/material/button';
+import { RouterModule, Route } from '@angular/router';
+import { HomeComponent } from './home/home.component';
+import { AuthorsComponent } from './authors/authors.component';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatMenuModule } from '@angular/material/menu';
+import { LayoutModule } from '@angular/cdk/layout';
+
+
+const appRoutes: Route[] = [
+  { path: '' , component: HomeComponent },
+  { path: 'books' , component: BooksComponent },
+  { path: 'authors' , component: AuthorsComponent },
+  { path: '**', redirectTo: 'books' },
+];
 
 @NgModule({
   declarations: [
@@ -21,7 +35,9 @@ import { MatButtonModule } from '@angular/material/button';
     NavbarComponent,
     BooksComponent,
     BookDetailComponent,
-    BookListComponent
+    BookListComponent,
+    HomeComponent,
+    AuthorsComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +48,11 @@ import { MatButtonModule } from '@angular/material/button';
     MatCardModule,
     MatListModule,
     MatBadgeModule,
-    MatButtonModule
+    MatButtonModule,
+    RouterModule.forRoot(appRoutes),
+    MatGridListModule,
+    MatMenuModule,
+    LayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]
