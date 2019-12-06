@@ -3,8 +3,7 @@
     <mat-card-title>Books</mat-card-title>
     <mat-card-content>
       <bs-book-list *ngFor="let author of authors"
-      [author]="author"
-      (bookSelected)="onSelectBook($event)"></bs-book-list>
+      [author]="author"></bs-book-list>
     </mat-card-content>
   </mat-card>
   <mat-card fxFlex *ngIf="selectedBook">
