@@ -1,14 +1,37 @@
-<div fxLayout="row" fxLayoutAlign="center center">
+<div fxLayout="row" fxLayoutAlign="center start">
   <mat-card fxFlex>
     <mat-card-title>Books</mat-card-title>
+    <mat-card-content>
+      <mat-nav-list>
+        <mat-list-item
+          *ngFor="let book of books"
+          [routerLink]="['/books', book.id]"
+        >
+          <a matLine>{{ book.name }}</a>
+        </mat-list-item>
+      </mat-nav-list>
+    </mat-card-content>
     <mat-card-actions align="end">
-      <button mat-raised-button color="warn"  (click)="goTo('books')">Books</button>
+      <button mat-raised-button color="warn" (click)="goTo('books')">
+        Books
+      </button>
     </mat-card-actions>
   </mat-card>
   <mat-card fxFlex>
-     <mat-card-title>Authors</mat-card-title>
+    <mat-card-title>Authors</mat-card-title>
+    <mat-card-content>
+      <mat-nav-list>
+        <mat-list-item *ngFor="let author of authors">
+          <a matLine [routerLink]="['/authors', author.id]">{{
+            author.name
+          }}</a>
+        </mat-list-item>
+      </mat-nav-list>
+    </mat-card-content>
     <mat-card-actions align="end">
-      <button mat-raised-button color="primary" (click)="goTo('authors')"> Authors</button>
+      <button mat-raised-button color="primary" (click)="goTo('authors')">
+        Authors
+      </button>
     </mat-card-actions>
   </mat-card>
 </div>
