@@ -1,0 +1,14 @@
+<div fxLayout="row" fxLayoutAlign="space-between" fxLayout.xs="column" >
+  <mat-card fxFlex="30">
+    <mat-card-title>Books</mat-card-title>
+    <mat-card-content>
+      <bs-book-list *ngFor="let author of authors"
+      [author]="author"
+      (bookSelected)="onSelectBook($event)"></bs-book-list>
+    </mat-card-content>
+  </mat-card>
+  <mat-card fxFlex *ngIf="selectedBook">
+    <mat-card-title>Detalis</mat-card-title>
+    <bs-book-detail [book]="selectedBook"></bs-book-detail>
+  </mat-card>
+</div>

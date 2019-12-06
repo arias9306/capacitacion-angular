@@ -1,0 +1,16 @@
+ <mat-card-header>
+    <img mat-card-avatar [src]="book.img">
+    <mat-card-title>
+      <span [matBadge]="book.quantity"
+      matBadgeOverlap="false"
+      [matBadgeColor]="book.quantity < 3 ? 'warn' : 'primary' " >{{book.name}}</span>
+    </mat-card-title>
+    <mat-card-subtitle>{{book.date | date}}</mat-card-subtitle>
+  </mat-card-header>
+<mat-card-content>
+  <p><b>Sinopsis</b>: {{book.sinopsis}}</p>
+</mat-card-content>
+<mat-card-actions align="end">
+  <button mat-raised-button color="accent">Comprar</button>
+</mat-card-actions>
+
