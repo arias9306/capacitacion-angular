@@ -1,0 +1,63 @@
+<mat-toolbar>Reactive Forms</mat-toolbar>
+<div fxLayout="row" fxLayoutAlign="center center">
+
+  <mat-card fxFlex="70">
+    <mat-card-title>Create Author</mat-card-title>
+    <mat-card-subtitle>Author Info</mat-card-subtitle>
+    <mat-card-content>
+      <form fxLayout="row wrap" fxLayoutAlign="start center" fxLayoutGap="25px">
+        <mat-form-field fxFlex="calc(100% - 25px)" appearance="outline">
+          <mat-label>Name</mat-label>
+          <input matInput placeholder="Name">
+          <mat-hint>Hint</mat-hint>
+        </mat-form-field>
+        <mat-form-field fxFlex="calc(50% - 25px)" appearance="outline">
+          <mat-label>Email</mat-label>
+          <input matInput placeholder="Email">
+          <mat-hint>Hint</mat-hint>
+        </mat-form-field>
+        <mat-form-field fxFlex="calc(50% - 25px)" appearance="outline">
+          <mat-label>Address</mat-label>
+          <input matInput placeholder="Address">
+          <mat-hint>Hint</mat-hint>
+        </mat-form-field>
+        <mat-form-field fxFlex="calc(50% - 25px)" appearance="outline">
+          <mat-label>Birthdate</mat-label>
+          <input matInput [matDatepicker]="picker" placeholder="Birthdate">
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+          <mat-hint>Hint</mat-hint>
+        </mat-form-field>
+        <mat-form-field fxFlex="calc(50% - 25px)" appearance="outline">
+          <mat-label>Gender</mat-label>
+          <mat-select>
+            <mat-option *ngFor="let gender of genders" [value]="gender">
+              {{ gender }}
+            </mat-option>
+          </mat-select>
+          <mat-hint>Hint</mat-hint>
+        </mat-form-field>
+
+
+        <h3>Books</h3>
+        <button fxFlex="5" mat-raised-button color="accent">Add</button>
+
+
+        <mat-form-field fxFlex="88" appearance="outline">
+          <mat-label>Book</mat-label>
+          <input matInput placeholder="Book">
+          <mat-hint>Hint</mat-hint>
+        </mat-form-field>
+        <button mat-icon-button color="warn" aria-label="Example icon-button with a heart icon">
+          <mat-icon>delete_forever</mat-icon>
+        </button>
+
+      </form>
+    </mat-card-content>
+    <mat-card-actions align="end">
+      <button mat-raised-button color="primary">Save</button>
+      <button mat-raised-button color="warn">Reset</button>
+    </mat-card-actions>
+  </mat-card>
+
+</div>
