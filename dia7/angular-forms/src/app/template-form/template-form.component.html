@@ -1,5 +1,5 @@
 <mat-toolbar>Template Forms</mat-toolbar>
-<form (ngSubmit)="onSubmit(authorForm)" #authorForm="ngForm">
+<form (ngSubmit)="onSubmit()" #authorForm="ngForm">
   <div fxLayout="row" fxLayoutAlign="center center">
     <mat-card fxFlex="70">
       <mat-card-title>Create Author</mat-card-title>
@@ -9,15 +9,41 @@
         fxLayoutAlign="start center"
         fxLayoutGap="25px"
       >
+        <!-- <input
+          placeholder="Name"
+          name="name"
+          [(ngModel)]="author.name"
+          required
+        />-->
         <mat-form-field fxFlex="calc(100% - 25px)" appearance="outline">
           <mat-label>Name</mat-label>
-          <input matInput placeholder="Name" name="name" ngModel />
-          <mat-hint>Hint</mat-hint>
+          <input
+            matInput
+            placeholder="Name"
+            minlength="3"
+            name="name"
+            ngModel
+            #name="ngModel"
+            required
+          />
+          <mat-hint *ngIf="name.errors.minlength"
+            >The name must have more than 3 characters
+          </mat-hint>
         </mat-form-field>
         <mat-form-field fxFlex="calc(50% - 25px)" appearance="outline">
           <mat-label>Email</mat-label>
-          <input matInput placeholder="Email" name="email" ngModel />
-          <mat-hint>Hint</mat-hint>
+          <input
+            matInput
+            placeholder="Email"
+            name="email"
+            email
+            required
+            ngModel
+            #email="ngModel"
+          />
+          <mat-hint *ngIf="!email.valid && email.touched"
+            >Email is invalid</mat-hint
+          >
         </mat-form-field>
         <mat-form-field fxFlex="calc(50% - 25px)" appearance="outline">
           <mat-label>Address</mat-label>
@@ -60,15 +86,26 @@
         <button
           mat-icon-button
           color="warn"
+          type="button"
           aria-label="Example icon-button with a heart icon"
         >
           <mat-icon>delete_forever</mat-icon>
         </button>
       </mat-card-content>
       <mat-card-actions align="end">
-        <button mat-raised-button color="primary" type="submit">Save</button>
-        <button mat-raised-button color="warn">Reset</button>
+        <button mat-raised-button color="primary" type="submit">
+          Save
+        </button>
+        <button
+          mat-raised-button
+          color="warn"
+          (click)="onReset()"
+          type="button"
+        >
+          Reset
+        </button>
       </mat-card-actions>
     </mat-card>
   </div>
+  {{ author | json }}
 </form>
