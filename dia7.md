@@ -1,12 +1,10 @@
 # Día 7
 
-## Forms
-
-### Template Driven Forms
+## Template Driven Forms
 
 Template Driven Forms son formulario basados en enteramente en el HTML esto quiere decir que todas las validaciones e interacciones del formulario se deben de configurar en el HTML del componente, ese tipo de formulario se usa típicamente para formularios pequeños.
 
-#### Configuración
+### Configuración
 
 Para poder usar Template Driven Forms debemos agregar el modulo de `FormsModule` en nuestro `app.module.ts` como se muestra en el siguiente código:
 
@@ -25,7 +23,7 @@ import { AppComponent } from './app.component';
 export class AppModule {}
 ```
 
-#### Formulario básico
+### Formulario básico
 
 Para poder usar Template Driven Forms todos los inputs que tengamos deben de estar dentro de una etiqueta `form` de HTML como se ve en el siguiente código:
 
@@ -149,7 +147,7 @@ input .ng-touched .ng-invalid {
 }
 ```
 
-### Reactive Forms
+## Reactive Forms
 
 ---
 
