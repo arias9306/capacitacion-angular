@@ -29,6 +29,9 @@
           <mat-hint *ngIf="name.errors.minlength"
             >The name must have more than 3 characters
           </mat-hint>
+          <mat-hint *ngIf="name.errors.required"
+            >The name is required
+          </mat-hint>
         </mat-form-field>
         <mat-form-field fxFlex="calc(50% - 25px)" appearance="outline">
           <mat-label>Email</mat-label>

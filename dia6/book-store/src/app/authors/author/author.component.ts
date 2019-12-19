@@ -1,5 +1,6 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnDestroy, OnInit } from "@angular/core";
 import { ActivatedRoute, ParamMap } from "@angular/router";
+import { Subscription } from "rxjs";
 import { Author } from "src/app/model/author.model";
 import { BookService } from "src/app/services/book.service";
 
@@ -8,8 +9,9 @@ import { BookService } from "src/app/services/book.service";
   templateUrl: "./author.component.html",
   styleUrls: ["./author.component.css"]
 })
-export class AuthorComponent implements OnInit {
+export class AuthorComponent implements OnInit, OnDestroy {
   author: Author;
+  paramSubscription: Subscription;
 
   constructor(
     private route: ActivatedRoute,
@@ -17,8 +19,14 @@ export class AuthorComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.route.paramMap.subscribe((params: ParamMap) => {
-      this.author = this.bookService.getAuthorById(+params.get("id"));
-    });
+    this.paramSubscription = this.route.paramMap.subscribe(
+      (params: ParamMap) => {
+        this.author = this.bookService.getAuthorById(+params.get("id"));
+      }
+    );
+  }
+
+  ngOnDestroy() {
+    this.paramSubscription.unsubscribe();
   }
 }
