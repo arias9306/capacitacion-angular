@@ -103,6 +103,11 @@
 ## [Día 5: Reto](https://github.com/arias9306/capacitacion-angular/blob/master/dia5.md)
 
 - Todo App
+  - Crear una aplicación que sirva para agregar tareas pendiente y luego marcarlas como finalizadas o elinarlas.
+
+  <p align="center">
+    <img src="https://raw.githubusercontent.com/arias9306/capacitacion-angular/master/img/todo_app.jpg" alt="Todo App" />
+  </p>
 
 ## [Día 6: Servicios y Routing](https://github.com/arias9306/capacitacion-angular/blob/master/dia6.md)
 
@@ -110,17 +115,16 @@
 - [Routing](https://github.com/arias9306/capacitacion-angular/blob/master/dia6.md#routing)
 - [Pipes](https://github.com/arias9306/capacitacion-angular/blob/master/dia6.md#pipes)
 
-## Día 7: Forms (Template Driven / Reactive)
+## [Día 7: Forms (Template Driven / Reactive)](https://github.com/arias9306/capacitacion-angular/blob/master/dia7.md)
 
-- Forms
-  - Template Driven
-  - Reactive Forms
+- [Forms](https://github.com/arias9306/capacitacion-angular/blob/master/dia7.md#forms)
+  - [Template Driven](https://github.com/arias9306/capacitacion-angular/blob/master/dia7.md#forms)
+  - [Reactive Forms](https://github.com/arias9306/capacitacion-angular/blob/master/dia7.md#forms)
 
-## Día 8: Peticiones Http y Deploy
+## [Día 8: Peticiones Http y Deploy](https://github.com/arias9306/capacitacion-angular/blob/master/dia8.md)
 
 - Http Request
 - Authentication (Guards)
 - Deploy
 
-* Proyecto
 
