@@ -149,6 +149,74 @@ input .ng-touched .ng-invalid {
 
 ## Reactive Forms
 
+A diferencia de Template Driven Forms, los Reactive Forms los creamos desde el TS, esto nos ayuda a tener mas control del estado del formulario desde el TS
+
+## Configuración
+
+Para poder usar Reactive Forms debemos agregar el modulo de `ReactiveFormsModule` en nuestro `app.module.ts` como se muestra en el siguiente código:
+
+```typescript
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { ReactiveFormsModule } from '@angular/forms';
+
+import { AppComponent } from './app.component';
+
+@NgModule({
+	imports: [BrowserModule, ReactiveFormsModule],
+	declarations: [AppComponent],
+	bootstrap: [AppComponent]
+})
+export class AppModule {}
+```
+
+## Formulario Básico
+
+En la forma en la que enlazamos el HTML y TS es creando un `FormControl` y asignandole un valor por defecto.
+
+```typescript
+import { Component } from '@angular/core';
+import { FormControl } from '@angular/forms';
+
+@Component({
+	selector: 'app-name-editor',
+	templateUrl: './name-editor.component.html',
+	styleUrls: ['./name-editor.component.css']
+})
+export class NameEditorComponent {
+	name = new FormControl('');
+}
+```
+
+y en el HTML tenemos que agregar la directiva `formControl` para asociar el input y el `FormControl` que tenmos en el TS.
+
+```html
+<div class="form-group">
+	<label for="name">Name</label>
+	<input type="text" class="form-control" [formControl]="name" />
+</div>
+```
+
+Ahora si queremos marcar como requerido el input de name, lo podemos hacer usando el `FormControl` al momento de crear el control, así como podemos asignar el valor por defecto, el `FormControl` puede recibir un array con las validaciones que queremos que tenga el input, Angular tiene una clase llamada `Validations` en la cual encontramos todas la validaciones que tiene HTML, asi mismo nosotros podemos crear nuestras propias validaciones y agregarlas al array.
+
+```typescript
+import { Component } from '@angular/core';
+import { FormControl, Validators } from '@angular/forms';
+
+@Component({
+	selector: 'app-name-editor',
+	templateUrl: './name-editor.component.html',
+	styleUrls: ['./name-editor.component.css']
+})
+export class NameEditorComponent {
+	name = new FormControl('', [
+		Validators.required,
+		Validators.minLength(4),
+		forbiddenNameValidator(/admin/i) // <-- Custom validation
+	]);
+}
+```
+
 ---
 
 ## Continua [Día 8: Peticiones Http y Deploy)](https://github.com/arias9306/capacitacion-angular/blob/master/dia8.md)
