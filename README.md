@@ -104,11 +104,9 @@
 - Todo App
   - Crear una aplicación que sirva para agregar tareas pendientes y luego marcarlas como finalizadas o eliminarlas. (usando `@input()` y `@Output()`)
 
-    -   Crear una aplicación que sirva para agregar tareas pendiente y luego marcarlas como finalizadas o elinarlas.
-
-    <p align="center">
-      <img src="https://raw.githubusercontent.com/arias9306/capacitacion-angular/master/img/todo_app.png" alt="Todo App" width="500" heigth="500" />
-    </p>
+  <p align="center">
+    <img src="https://raw.githubusercontent.com/arias9306/capacitacion-angular/master/img/todo_app.png" alt="Todo App" width="500" heigth="500" />
+  </p>
 
 ## [Día 6: Servicios y Routing](https://github.com/arias9306/capacitacion-angular/blob/master/dia6.md)
 
@@ -129,7 +127,6 @@
 ## [Día 8: Peticiones Http y Deploy](https://github.com/arias9306/capacitacion-angular/blob/master/dia8.md)
 
 - Http Request
-- ~~Authentication (Guards)~~
 - Deploy
 
 
