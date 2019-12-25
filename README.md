@@ -103,7 +103,7 @@
 ## [Día 5: Reto](https://github.com/arias9306/capacitacion-angular/blob/master/dia5.md)
 
 - Todo App
-  - Crear una aplicación que sirva para agregar tareas pendiente y luego marcarlas como finalizadas o elinarlas.
+  - Crear una aplicación que sirva para agregar tareas pendientes y luego marcarlas como finalizadas o eliminarlas. (usando `@input()` y `@Output()`)
 
   <p align="center">
     <img src="https://raw.githubusercontent.com/arias9306/capacitacion-angular/master/img/todo_app.png" alt="Todo App" width="500" heigth="500" />
@@ -124,7 +124,7 @@
 ## [Día 8: Peticiones Http y Deploy](https://github.com/arias9306/capacitacion-angular/blob/master/dia8.md)
 
 - Http Request
-- Authentication (Guards)
+- ~~Authentication (Guards)~~
 - Deploy
 
 
