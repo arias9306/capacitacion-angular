@@ -217,6 +217,83 @@ export class NameEditorComponent {
 }
 ```
 
+Ya vimos como asociar un input a una variable en el ts, pero generalmente los formularios tienen mas de un input para esos casos lo que se hace es agrupar los `FormControl`'s en un `FormGroup` de la siguiente manera.
+
+``` typescript
+import { Component } from '@angular/core';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
+
+@Component({
+  selector: 'app-author',
+  templateUrl: './author.component.html',
+  styleUrls: ['./author.component.css']
+})
+export class AuthorComponent {
+  authorForm = new FormGroup({
+    firstName: new FormControl('',[Validators.required]),
+    lastName: new FormControl(''),
+  });
+}
+```
+
+Usando el `FormGroup` ahora todos los `FormControl`'s que creemos van a estar agrupados, a su vez el `FormGroup` verifica el estado de los `FormControl`'s que agrupa.
+
+Ahora al tener el `FormGroup` la menera de asociar los inputs en el HTML cambia un poco, la manera de hacer es de la siguiente forma.
+
+``` html
+<form [formGroup]="authorForm">
+
+  <label>
+    First Name:
+    <input type="text" formControlName="firstName">
+  </label>
+
+  <label>
+    Last Name:
+    <input type="text" formControlName="lastName">
+  </label>
+
+  <button (click)="onSave()">Save</button>
+
+</form>
+```
+Ahora para acceder a los datos ingresados en el formulario, lo que tenemos que hacer es acceder a la propiedad value de nuestro `authorForm` de la siguiente manera.
+
+``` typescript
+onSave() {
+  console.log(this.authorForm.value);
+}
+```
+Al igual que con el Template Driven Form podemos deshabilitar el botón de Save en caso de que el formulario no sea valido.
+
+``` html
+<button (click)="onSave()" [disabled]="!authorForm.valid">Save</button>
+```
+
+En nuestro `FormGroup` también podemos agregar otros `FormGroup`, esto se hace para validar bloques de campos,
+la manera de crear esos grupos anidados es la siguiente.
+
+``` typescript
+import { Component } from '@angular/core';
+import { FormGroup, FormControl } from '@angular/forms';
+
+@Component({
+  selector: 'app-author',
+  templateUrl: './author.component.html',
+  styleUrls: ['./author.component.css']
+})
+export class ProfileEditorComponent {
+  authorForm = new FormGroup({
+    firstName: new FormControl(''),
+    lastName: new FormControl(''),
+    address: new FormGroup({
+      street: new FormControl(''),
+      city: new FormControl('')
+    })
+  });
+}
+```
+
 ---
 
 ## Continua [Día 8: Peticiones Http y Deploy)](https://github.com/arias9306/capacitacion-angular/blob/master/dia8.md)
