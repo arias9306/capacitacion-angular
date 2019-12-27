@@ -58,6 +58,6 @@ En la siguiente página encontraran mas información sobre la configuración que
 
 ---
 
-## Continuara...
+## Continuará...
 
 ---
