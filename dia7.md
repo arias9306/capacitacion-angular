@@ -393,7 +393,7 @@ export class AuthorComponent {
 }
 ```
 
-## FormArrys
+## FormArrays
 
 `FormArray` es una alternativa a `FormGroup` para administrar cualquier número de controles sin nombre. se puede insertar y eliminar dinámicamente controles de instancias de matriz de formulario, y el valor de instancia de matriz de formulario y el estado de validación se calcula a partir de sus controles.
 
@@ -477,6 +477,7 @@ export class AuthorComponent {
 	}
 }
 ```
+
 y en el HTML hacemos lo mismo que haciamos en Template Driven Forms.
 
 ```html
@@ -487,35 +488,36 @@ y en el HTML hacemos lo mismo que haciamos en Template Driven Forms.
 
 En Reactive Forms tambien podemos validar `FormGroup` enteros, de la siguiente manera.
 
-``` typescript
-const heroForm = new FormGroup({
-  'name': new FormControl(),
-  'alterEgo': new FormControl(),
-  'power': new FormControl()
-}, { validators: identityRevealedValidator });
+```typescript
+const heroForm = new FormGroup(
+	{
+		name: new FormControl(),
+		alterEgo: new FormControl(),
+		power: new FormControl()
+	},
+	{ validators: identityRevealedValidator }
+);
 ```
 
 y el validador luce de la siguiente manera.
 
-``` typescript
+```typescript
 /** A hero's name can't match the hero's alter ego */
 export const identityRevealedValidator: ValidatorFn = (control: FormGroup): ValidationErrors | null => {
-  const name = control.get('name');
-  const alterEgo = control.get('alterEgo');
+	const name = control.get('name');
+	const alterEgo = control.get('alterEgo');
 
-  return name && alterEgo && name.value === alterEgo.value ? { 'identityRevealed': true } : null;
+	return name && alterEgo && name.value === alterEgo.value ? { identityRevealed: true } : null;
 };
 ```
 
 por ultimo en el HTML
 
-
-``` html
+```html
 <div *ngIf="heroForm.errors?.identityRevealed && (heroForm.touched || heroForm.dirty)" class="cross-validation-error-message alert alert-danger">
-    Name cannot match alter ego.
+	Name cannot match alter ego.
 </div>
 ```
-
 
 ---
 
