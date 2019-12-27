@@ -212,27 +212,33 @@ export class NameEditorComponent {
 	name = new FormControl('', [
 		Validators.required,
 		Validators.minLength(4),
-		forbiddenNameValidator(/admin/i) // <-- Custom validation
+		this.forbiddenNameValidator(/admin/i) // <-- Custom validation
 	]);
-}
+
+	forbiddenNameValidator(nameRe: RegExp): ValidatorFn {
+  		return (control: AbstractControl): {[key: string]: any} | null => {
+    		const forbidden = nameRe.test(control.value);
+    		return forbidden ? {'forbiddenName': {value: control.value}} : null;
+  		};
+	}
 ```
 
 Ya vimos como asociar un input a una variable en el ts, pero generalmente los formularios tienen mas de un input para esos casos lo que se hace es agrupar los `FormControl`'s en un `FormGroup` de la siguiente manera.
 
-``` typescript
+```typescript
 import { Component } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
-  selector: 'app-author',
-  templateUrl: './author.component.html',
-  styleUrls: ['./author.component.css']
+	selector: 'app-author',
+	templateUrl: './author.component.html',
+	styleUrls: ['./author.component.css']
 })
 export class AuthorComponent {
-  authorForm = new FormGroup({
-    firstName: new FormControl('',[Validators.required]),
-    lastName: new FormControl(''),
-  });
+	authorForm = new FormGroup({
+		firstName: new FormControl('', [Validators.required]),
+		lastName: new FormControl('')
+	});
 }
 ```
 
@@ -240,59 +246,276 @@ Usando el `FormGroup` ahora todos los `FormControl`'s que creemos van a estar ag
 
 Ahora al tener el `FormGroup` la menera de asociar los inputs en el HTML cambia un poco, la manera de hacer es de la siguiente forma.
 
-``` html
+```html
 <form [formGroup]="authorForm">
+	<label>
+		First Name:
+		<input type="text" formControlName="firstName" />
+	</label>
 
-  <label>
-    First Name:
-    <input type="text" formControlName="firstName">
-  </label>
+	<label>
+		Last Name:
+		<input type="text" formControlName="lastName" />
+	</label>
 
-  <label>
-    Last Name:
-    <input type="text" formControlName="lastName">
-  </label>
-
-  <button (click)="onSave()">Save</button>
-
+	<button (click)="onSave()">Save</button>
 </form>
 ```
+
 Ahora para acceder a los datos ingresados en el formulario, lo que tenemos que hacer es acceder a la propiedad value de nuestro `authorForm` de la siguiente manera.
 
-``` typescript
+```typescript
 onSave() {
   console.log(this.authorForm.value);
 }
 ```
+
 Al igual que con el Template Driven Form podemos deshabilitar el botón de Save en caso de que el formulario no sea valido.
 
-``` html
+```html
 <button (click)="onSave()" [disabled]="!authorForm.valid">Save</button>
 ```
 
 En nuestro `FormGroup` también podemos agregar otros `FormGroup`, esto se hace para validar bloques de campos,
 la manera de crear esos grupos anidados es la siguiente.
 
-``` typescript
+```typescript
 import { Component } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 
 @Component({
-  selector: 'app-author',
-  templateUrl: './author.component.html',
-  styleUrls: ['./author.component.css']
+	selector: 'app-author',
+	templateUrl: './author.component.html',
+	styleUrls: ['./author.component.css']
 })
-export class ProfileEditorComponent {
-  authorForm = new FormGroup({
-    firstName: new FormControl(''),
-    lastName: new FormControl(''),
-    address: new FormGroup({
-      street: new FormControl(''),
-      city: new FormControl('')
-    })
+export class AuthorComponent {
+	authorForm = new FormGroup({
+		firstName: new FormControl(''),
+		lastName: new FormControl(''),
+		address: new FormGroup({
+			street: new FormControl(''),
+			city: new FormControl('')
+		})
+	});
+}
+```
+
+Y la manera de relacionar los `FormGroup` anidados es la siguiente
+
+```html
+<form [formGroup]="authorForm">
+	<label>
+		First Name:
+		<input type="text" formControlName="firstName" required />
+	</label>
+
+	<label>
+		Last Name:
+		<input type="text" formControlName="lastName" />
+	</label>
+
+	<div formGroupName="address">
+		<h3>Address</h3>
+
+		<label>
+			Street:
+			<input type="text" formControlName="street" />
+		</label>
+
+		<label>
+			City:
+			<input type="text" formControlName="city" />
+		</label>
+
+		<label>
+			State:
+			<input type="text" formControlName="state" />
+		</label>
+	</div>
+
+	<button (click)="onSave()" [disabled]="!authorForm.valid">Save</button>
+</form>
+```
+
+## Actualizar el Formulario
+
+Existen 2 maneras para actualizar o hacer un pre-llenado del formulario desde el TS.
+
+-   Una es usando el método `setValue()`, el cual recibe un objeto JSON que debe de tener la misma estructura de controles que definimos en nuestro `FormGroup` principal, si no se le pasa el objecto con los mismos formControls el metodo va a fallar.
+
+-   La otra opción es usar el método `patchValue()`, el cual recibe también un objecto JSON pero en este caso podemos pasar solamente los `FormControl`'s que queremos actualizar.
+
+```typescript
+updateAuthorForm() {
+  this.authorForm.setValue({
+    firstName: 'Andres',
+	lastName: 'Arias'
+    address: {
+      street: 'Calle falsa 123',
+	  city: 'Santander'
+    }
+  });
+}
+
+
+partialUpdateAuthorForm() {
+  this.authorForm.patchValue({
+    firstName: 'Andres',
+	lastName: 'Arias'
   });
 }
 ```
+
+## FormBuilder
+
+Crear las instancias de los `FormControl` puede llegar a ser repetitivo, es por eso que Angular provee un servicio que se encarga de eso, llamado `FormBuilder`.
+
+```typescript
+import { Component } from '@angular/core';
+import { FormBuilder, Validators } from '@angular/forms';
+
+@Component({
+	selector: 'app-author',
+	templateUrl: './author.component.html',
+	styleUrls: ['./author.component.css']
+})
+export class AuthorComponent {
+	constructor(private fb: FormBuilder) {}
+
+	authorForm = this.fb.group({
+		firstName: ['', Validators.required],
+		lastName: ['', [Validators.required, Validators.minlength(3)]],
+		address: this.fb.group({
+			street: [''],
+			city: ['']
+		})
+	});
+}
+```
+
+## FormArrys
+
+`FormArray` es una alternativa a `FormGroup` para administrar cualquier número de controles sin nombre. se puede insertar y eliminar dinámicamente controles de instancias de matriz de formulario, y el valor de instancia de matriz de formulario y el estado de validación se calcula a partir de sus controles.
+
+```typescript
+import { Component } from '@angular/core';
+import { FormBuilder, Validators } from '@angular/forms';
+
+@Component({
+	selector: 'app-author',
+	templateUrl: './author.component.html',
+	styleUrls: ['./author.component.css']
+})
+export class AuthorComponent {
+	constructor(private fb: FormBuilder) {}
+
+	authorForm = this.fb.group({
+		firstName: ['', Validators.required],
+		lastName: ['', [Validators.required, Validators.minlength(3)]],
+		address: this.fb.group({
+			street: [''],
+			city: ['']
+		}),
+		books: this.fb.array([this.fb.control('')])
+	});
+}
+```
+
+Ahora lo que tenemos que hacer es crear un método para agregar dinamicamente mas `FormControl`'s al array de `books`
+
+```typescript
+addBooks() {
+	(<FormArray>this.authorForm.get('books')).push(this.fb.control(''));
+}
+```
+
+Ahora para usar nuestro `FormArray` en el HTML, lo hacemos de la siguiente manera.
+
+```html
+<div formArrayName="books">
+	<h3>Books</h3>
+	<button (click)="addBooks()">Add Book</button>
+
+	<div *ngFor="let book of authorForm.get('books').controls; let i=index">
+		<!-- The repeated alias template -->
+		<label>
+			Book:
+			<input type="text" [formControlName]="i" />
+		</label>
+	</div>
+</div>
+```
+
+## Validaciones
+
+Como vimos en los Template Driven Forms en el `FormControl` tenemos un array de errors el cual podemos usar para saber si un input tiene o no errores, en Reactive Forms tambien debemos de usar ese array para saber si el control es valido o no.
+
+```typescript
+import { Component } from '@angular/core';
+import { FormBuilder, Validators, FormControl } from '@angular/forms';
+
+@Component({
+	selector: 'app-author',
+	templateUrl: './author.component.html',
+	styleUrls: ['./author.component.css']
+})
+export class AuthorComponent {
+	constructor(private fb: FormBuilder) {}
+
+	authorForm = this.fb.group({
+		firstName: ['', Validators.required],
+		lastName: ['', [Validators.required, Validators.minlength(3)]],
+		address: this.fb.group({
+			street: [''],
+			city: ['']
+		}),
+		books: this.fb.array([this.fb.control('')])
+	});
+
+	get firstName(): FormControl {
+		return this.authorForm.get('firstName');
+	}
+}
+```
+y en el HTML hacemos lo mismo que haciamos en Template Driven Forms.
+
+```html
+<div *ngIf="firstName.errors.required">
+	First Name is required.
+</div>
+```
+
+En Reactive Forms tambien podemos validar `FormGroup` enteros, de la siguiente manera.
+
+``` typescript
+const heroForm = new FormGroup({
+  'name': new FormControl(),
+  'alterEgo': new FormControl(),
+  'power': new FormControl()
+}, { validators: identityRevealedValidator });
+```
+
+y el validador luce de la siguiente manera.
+
+``` typescript
+/** A hero's name can't match the hero's alter ego */
+export const identityRevealedValidator: ValidatorFn = (control: FormGroup): ValidationErrors | null => {
+  const name = control.get('name');
+  const alterEgo = control.get('alterEgo');
+
+  return name && alterEgo && name.value === alterEgo.value ? { 'identityRevealed': true } : null;
+};
+```
+
+por ultimo en el HTML
+
+
+``` html
+<div *ngIf="heroForm.errors?.identityRevealed && (heroForm.touched || heroForm.dirty)" class="cross-validation-error-message alert alert-danger">
+    Name cannot match alter ego.
+</div>
+```
+
 
 ---
 
